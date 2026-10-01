@@ -6989,10 +6989,26 @@ button {
    ======================================================== */
 
 @media (min-width: 1025px) {
-  /* 1. Header & Navigation Máy Tính */
+  /* Khung gầm PC Rộng Thoáng Đầy Đặn (Full & Symmetrical) */
+  .container {
+    max-width: 1560px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 32px;
+    box-sizing: border-box;
+  }
+
+  /* 1. Header & Ticker Tràn Viền Full-Width Hoàn Hảo */
+  .royal-ticker-bar .container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 36px;
+  }
+
   .royal-header .container {
-    max-width: 1440px;
-    padding: 0 24px;
+    max-width: 100%;
+    width: 100%;
+    padding: 0 36px;
   }
 
   .royal-header {
@@ -7003,44 +7019,47 @@ button {
     display: none;
   }
 
-  .header-left {
-    gap: 0;
-    flex-shrink: 0;
-  }
-
   .header-content {
     height: 80px;
-    gap: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    position: relative;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 0;
   }
 
   .royal-brand {
-    margin-right: 12px;
-    flex-shrink: 0;
+    margin-right: 0;
   }
 
+  /* Căn Giữa Tuyệt Đối Thanh Menu Trên Màn Hình Máy Tính */
   .royal-nav {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
     background: rgba(14, 17, 26, 0.85);
-    padding: 4px 6px;
+    padding: 5px 8px;
     border-radius: 14px;
     border: 1.5px solid rgba(212, 175, 55, 0.25);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-    flex-shrink: 1;
+    margin: 0 auto; /* CĂN GIỮA CHUẨN XÁC GIỮA MÀN HÌNH */
+    flex-shrink: 0;
   }
 
   .nav-item {
-    padding: 6px 11px;
+    padding: 7px 12px;
     border-radius: 10px;
-    font-size: 0.81rem;
+    font-size: 0.82rem;
     font-weight: 700;
     transition: all 0.25s ease;
-    height: 36px;
+    height: 38px;
     white-space: nowrap;
   }
 
@@ -7062,12 +7081,12 @@ button {
     display: flex;
     align-items: center;
     gap: 12px;
-    flex-shrink: 0;
-    margin-left: auto;
+    flex: 0 0 auto;
+    margin-left: 0;
   }
 
   .btn-royal-deposit {
-    padding: 8px 14px;
+    padding: 8px 16px;
     gap: 8px;
     min-height: 42px;
     flex-shrink: 0;
@@ -7097,20 +7116,20 @@ button {
   }
 
   .acc-name {
-    max-width: 130px;
+    max-width: 140px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
 
-  /* 2. Hero Section Máy Tính */
+  /* 2. Hero Section Máy Tính: Cân Đối 50 / 50 Hai Bên Không Bị Nghiêng */
   .mega-hero-banner {
     padding: 65px 0 85px;
   }
 
   .hero-headline {
     font-family: var(--font-royal);
-    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
     font-weight: 900;
     line-height: 1.15;
     letter-spacing: 0.5px;
@@ -7119,9 +7138,20 @@ button {
 
   .hero-inner-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 48px;
-    align-items: center;
+    grid-template-columns: 1fr 1fr; /* CHIA ĐỀU 50% - 50% HOÀN TOÀN CÂN ĐỐI */
+    gap: 50px;
+    align-items: stretch;
+  }
+
+  .hero-left-hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .jackpot-counter-box {
+    margin-top: auto;
+    width: 100%;
   }
 
   .vip-metal-card {
@@ -7145,10 +7175,10 @@ button {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
   }
 
-  /* 3. Lưới Thẻ Cổng Game Máy Tính: 6 Cột Đối Xứng Hoàn Hảo Cho 5 Thẻ */
+  /* 3. Lưới Thẻ Cổng Game Máy Tính */
   .hub-portal-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
     margin-bottom: 50px;
   }
@@ -7157,22 +7187,6 @@ button {
     min-height: 440px;
     display: flex;
     flex-direction: column;
-  }
-
-  /* Hàng trên: 3 thẻ (mỗi thẻ chiếm 2 cột) */
-  .hub-card:nth-child(1),
-  .hub-card:nth-child(2),
-  .hub-card:nth-child(3) {
-    grid-column: span 2;
-  }
-
-  /* Hàng dưới: 2 thẻ được căn chính giữa trang (cột 2->4 và cột 4->6) */
-  .hub-card:nth-child(4) {
-    grid-column: 2 / span 2;
-  }
-
-  .hub-card:nth-child(5) {
-    grid-column: 4 / span 2;
   }
 
   .hub-card-body {
@@ -7189,15 +7203,17 @@ button {
     gap: 10px;
   }
 
-  /* 4. Đấu Trường Tài Xỉu Máy Tính */
+  /* 4. Đấu Trường Tài Xỉu Máy Tính: Căn Giữa Sân Chơi */
   .taixiu-game-table {
-    padding: 36px 32px;
+    padding: 38px 36px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   .taixiu-arena {
     display: grid;
     grid-template-columns: 1fr 1.15fr 1fr;
-    gap: 24px;
+    gap: 28px;
     align-items: center;
     margin-bottom: 30px;
   }
@@ -7217,7 +7233,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 16px;
-    padding: 14px 20px;
+    padding: 14px 24px;
   }
 
   .chip-coins-list {
@@ -7235,18 +7251,20 @@ button {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7), 0 0 12px rgba(255, 215, 0, 0.5);
   }
 
-  /* 5. Sảnh Lô Đề Máy Tính */
+  /* 5. Sảnh Lô Đề Máy Tính: Bố Cục Rộng Mở */
   .lode-layout-grid {
     display: grid;
-    grid-template-columns: 1fr 1.75fr;
-    gap: 28px;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 32px;
     align-items: start;
+    max-width: 1540px;
+    margin: 0 auto;
   }
 
   .quick-numbers-grid {
     grid-template-columns: repeat(10, 1fr);
-    max-height: 260px;
-    gap: 7px;
+    max-height: 280px;
+    gap: 8px;
   }
 
   .num-cell:hover {
@@ -7255,6 +7273,11 @@ button {
   }
 
   /* 6. Bảng Kèo Thể Thao Máy Tính */
+  .sports-arena-box {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
   .matches-list-grid {
     display: flex;
     flex-direction: column;
@@ -7266,7 +7289,7 @@ button {
     grid-template-columns: 1.2fr 1fr;
     align-items: center;
     gap: 24px;
-    padding: 20px 24px;
+    padding: 22px 28px;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
 
@@ -7289,14 +7312,14 @@ button {
 
   /* 7. Máy Quay Hũ Slots 777 */
   .slot-machine-box {
-    max-width: 980px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 32px;
+    padding: 36px;
   }
 
   .slot-reels-frame {
-    max-width: 720px;
-    margin: 20px auto;
+    max-width: 780px;
+    margin: 24px auto;
   }
 
   /* 8. Modals Máy Tính: Căn Giữa Sắc Nét */
@@ -7324,31 +7347,31 @@ button {
   }
 }
 
-/* Màn Hình Siêu Rộng Desktop: 1400px - 1920px+ (Full HD / 2K / 4K) */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1380px;
-    padding: 0 32px;
+/* ĐẶC BIỆT CHO MÀN HÌNH FULL HD & 2K TRỞ LÊN (>= 1200PX): ĐẦY ĐẶN TOÀN MÀN HÌNH */
+@media (min-width: 1200px) {
+  .hub-portal-grid {
+    grid-template-columns: repeat(5, 1fr); /* 5 CỔNG GAME DÀN ĐỀU TRÊN 1 HÀNG ĐẸP NHƯ SÒNG BẠC QUỐC TẾ */
+    gap: 20px;
   }
 
-  .hero-inner-grid {
-    gap: 60px;
+  .hub-card {
+    min-height: 450px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1640px;
+    padding: 0 40px;
+  }
+
+  .royal-header .container,
+  .royal-ticker-bar .container {
+    padding: 0 48px;
   }
 
   .hub-portal-grid {
-    gap: 32px;
-  }
-
-  .taixiu-game-table {
-    padding: 40px;
-  }
-
-  .baccarat-cards-stage {
-    max-width: 920px;
-  }
-
-  .baccarat-betting-grid {
-    max-width: 1020px;
+    gap: 24px;
   }
 }
 
