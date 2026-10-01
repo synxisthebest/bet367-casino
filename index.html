@@ -1,0 +1,2241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0a0f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Bet367 - Đẳng Cấp Thượng Lưu | Bóng Đá, Casino, Tài Xỉu, Lô Đề 1 Ăn 99.5</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome 6 Pro / Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Google Fonts: Montserrat (Vietnamese) & Playfair Display (Vietnamese) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="royal-theme">
+
+  <!-- Dải thông báo VIP Bet367 Ticker -->
+  <div class="royal-ticker-bar">
+    <div class="container ticker-container">
+      <div class="ticker-left">
+        <i class="fa-solid fa-crown gold-glow-icon"></i>
+        <span class="ticker-tag">BET367 VIP:</span>
+        <span class="ticker-text">Chào mừng đến với Bet367. Thưởng nạp đầu 100% tới 10,000,000đ. Đánh Đề 1 ăn 99.5 cao nhất thị trường. Tài Xỉu cân cửa không giật lag!</span>
+      </div>
+      <div class="ticker-right">
+        <button id="sound-toggle-btn" class="sound-toggle-btn" title="Bật hoặc tắt âm thanh casino" aria-label="Bật hoặc tắt âm thanh">
+          <i class="fa-solid fa-volume-high" id="sound-icon"></i>
+          <span id="sound-text">Âm thanh</span>
+        </button>
+        <span class="live-clock"><i class="fa-regular fa-clock"></i> GMT+7 <span id="clock-display">20:38:00</span></span>
+        <span class="vip-support"><i class="fa-solid fa-headset text-gold"></i> CSKH Bet367: 0988.367.367</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Hoàng Gia Bet367 -->
+  <header class="royal-header">
+    <div class="container header-content">
+      
+      <!-- Cụm Trái: Nút 3 gạch Hoàng Gia + Logo Bet367 -->
+      <div class="header-left">
+        <!-- Nút Menu 3 Gạch Hoàng Kim -->
+        <button id="menu-toggle-btn" class="royal-hamburger" title="Mở menu hoàng gia Bet367" aria-label="Menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
+        </button>
+
+        <a href="#" class="royal-brand">
+          <div class="brand-crest">
+            <span class="crest-number">367</span>
+            <i class="fa-solid fa-crown crest-crown"></i>
+          </div>
+          <div class="brand-text-block">
+            <span class="brand-title">BET<span class="gold-shimmer">367</span></span>
+            <span class="brand-subtitle">ROYALE CASINO & SPORTS</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Menu sảnh game chính: Tài Xỉu, Lô Đề, Bóng Đá, Live Casino, Cúp Giải Đấu -->
+      <nav class="royal-nav">
+        <a href="javascript:void(0)" onclick="navigateToPage('home')" class="nav-item active" id="nav-btn-home">
+          <i class="fa-solid fa-house text-gold"></i>
+          <span>Sảnh Chính</span>
+        </a>
+        <a href="javascript:void(0)" onclick="navigateToPage('taixiu')" class="nav-item" id="nav-btn-taixiu">
+          <i class="fa-solid fa-dice-d6 text-gold"></i>
+          <span>Tài Xỉu MD5</span>
+          <span class="hot-pill">HOT</span>
+        </a>
+        <a href="javascript:void(0)" onclick="navigateToPage('lode')" class="nav-item" id="nav-btn-lode">
+          <i class="fa-solid fa-clover text-emerald"></i>
+          <span>Lô Đề 1 Ăn 99.5</span>
+        </a>
+        <a href="javascript:void(0)" onclick="navigateToPage('casino')" class="nav-item" id="nav-btn-casino">
+          <i class="fa-solid fa-dice text-gold"></i>
+          <span>Live Casino</span>
+        </a>
+        <a href="javascript:void(0)" onclick="navigateToPage('sports')" class="nav-item" id="nav-btn-sports">
+          <i class="fa-solid fa-futbol text-white"></i>
+          <span>Bóng Đá Live</span>
+        </a>
+        <a href="javascript:void(0)" onclick="navigateToPage('slots')" class="nav-item" id="nav-btn-slots">
+          <i class="fa-solid fa-gem text-gold"></i>
+          <span>Nổ Hũ Thần Tài</span>
+        </a>
+      </nav>
+
+      <!-- Cụm Phải: Đăng ký, Đăng nhập, Nạp tiền, Tài khoản -->
+      <div class="header-right">
+        <!-- Khi chưa đăng nhập -->
+        <div class="guest-group" id="guest-actions">
+          <button class="btn btn-royal-outline" id="btn-open-login">
+            <i class="fa-solid fa-arrow-right-to-bracket"></i> Đăng Nhập
+          </button>
+          <button class="btn btn-royal-gold" id="btn-open-register">
+            <i class="fa-solid fa-user-plus"></i> Đăng Ký
+          </button>
+        </div>
+
+        <!-- Tiện ích cốt lõi yêu cầu: NẠP TIỀN & TÀI KHOẢN -->
+        <div class="user-action-group">
+          <!-- Nút Nạp tiền siêu nổi bật -->
+          <button class="btn btn-royal-deposit" id="btn-open-deposit" title="Nạp tiền Bet367">
+            <div class="deposit-coin-icon">
+              <i class="fa-solid fa-coins"></i>
+            </div>
+            <div class="deposit-text-col">
+              <span class="deposit-lbl">NẠP TIỀN</span>
+              <small class="deposit-bonus">+100% THƯỞNG</small>
+            </div>
+          </button>
+
+          <!-- Nút Tài khoản đẳng cấp VIP -->
+          <button class="btn btn-royal-account" id="btn-open-account" title="Quản lý tài khoản VIP Bet367">
+            <div class="account-avatar-glow">
+              <i class="fa-solid fa-crown text-gold"></i>
+              <span class="vip-mini-tag">VIP</span>
+            </div>
+            <div class="account-details-col">
+              <span class="acc-name" id="top-user-name">newplayer3667</span>
+              <span class="acc-balance" id="top-user-balance">0 ₫</span>
+            </div>
+            <i class="fa-solid fa-chevron-down text-gold chevron-icon"></i>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Side Navigation Drawer (Menu 3 gạch Trượt Hoàng Gia) -->
+  <div class="royal-drawer-backdrop" id="sidebar-overlay"></div>
+  <aside class="royal-drawer" id="side-drawer">
+    <!-- Đầu drawer -->
+    <div class="drawer-top-banner">
+      <div class="drawer-vip-card">
+        <div class="vip-crest-wrap">
+          <i class="fa-solid fa-crown gold-crown-big"></i>
+          <span class="vip-badge-ribbon">BET367 VIP</span>
+        </div>
+        <div class="vip-user-summary">
+          <h3 id="drawer-username">newplayer3667</h3>
+          <p class="vip-tier"><i class="fa-solid fa-gem text-gold"></i> Cấp Bậc: <strong>Hội Viên Mới</strong></p>
+          <div class="vip-balance-box">
+            <span>Ví khả dụng:</span>
+            <h4 id="drawer-balance">0 ₫</h4>
+          </div>
+        </div>
+      </div>
+      <button class="royal-close-btn" id="close-drawer-btn" aria-label="Đóng">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <!-- Nút Nạp / Rút nhanh trong Drawer -->
+    <div class="drawer-action-row">
+      <button class="drawer-btn-gold" onclick="openModal('deposit-modal'); closeDrawer();">
+        <i class="fa-solid fa-circle-arrow-down"></i> Nạp Tiền
+      </button>
+      <button class="drawer-btn-dark" onclick="openModal('withdraw-modal'); closeDrawer();">
+        <i class="fa-solid fa-circle-arrow-up"></i> Rút Tiền
+      </button>
+    </div>
+
+    <!-- Danh mục menu 3 gạch -->
+    <ul class="drawer-links-list">
+      <li class="menu-cat-title">SẢNH TRÒ CHƠI NỔI BẬT</li>
+      <li>
+        <a href="javascript:void(0)" class="drawer-link active" onclick="navigateToPage('taixiu'); closeDrawer();">
+          <div class="link-icon bg-taixiu"><i class="fa-solid fa-dice-d6"></i></div>
+          <div class="link-info">
+            <strong>Tài Xỉu MD5 Livestream</strong>
+            <small>Cân cửa tự động, xanh chín 100%</small>
+          </div>
+          <span class="live-blink">HOT</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="drawer-link" onclick="navigateToPage('lode'); closeDrawer();">
+          <div class="link-icon bg-lode"><i class="fa-solid fa-clover"></i></div>
+          <div class="link-info">
+            <strong>Lô Đề 3 Miền - 1 Ăn 99.5</strong>
+            <small>Bắc - Trung - Nam & Siêu Tốc 1s</small>
+          </div>
+          <span class="gold-badge">99.5</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="drawer-link" onclick="navigateToPage('sports'); closeDrawer();">
+          <div class="link-icon bg-sports"><i class="fa-solid fa-futbol"></i></div>
+          <div class="link-info">
+            <strong>Kèo Thể Thao & Bóng Đá</strong>
+            <small>Cúp C1, Ngoại Hạng Anh, World Cup</small>
+          </div>
+          <span class="live-blink">LIVE</span>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="drawer-link" onclick="navigateToPage('casino'); closeDrawer();">
+          <div class="link-icon bg-casino"><i class="fa-solid fa-dice"></i></div>
+          <div class="link-info">
+            <strong>Live Casino Thượng Lưu 4K</strong>
+            <small>Baccarat, Roulette, Rồng Hổ</small>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="drawer-link" onclick="navigateToPage('slots'); closeDrawer();">
+          <div class="link-icon bg-cup"><i class="fa-solid fa-trophy"></i></div>
+          <div class="link-info">
+            <strong>Giải Đấu Cup Hoàng Gia</strong>
+            <small>Tổng quỹ thưởng 50 Tỷ VNĐ</small>
+          </div>
+          <span class="gold-badge">50 TỶ</span>
+        </a>
+      </li>
+
+      <li class="menu-cat-title">QUẢN LÝ TÀI KHOẢN BET367</li>
+      <li>
+        <a href="javascript:void(0)" class="drawer-link" id="drawer-account-btn">
+          <div class="link-icon bg-gold"><i class="fa-solid fa-user-shield"></i></div>
+          <div class="link-info">
+            <strong>Hồ Sơ & Thẻ VIP Hoàng Gia</strong>
+            <small>Bảo mật 2 lớp, ngân hàng chính chủ</small>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" class="drawer-link" id="drawer-history-btn">
+          <div class="link-icon bg-dark"><i class="fa-solid fa-receipt"></i></div>
+          <div class="link-info">
+            <strong>Lịch Sử Cược & Nạp Rút</strong>
+            <small>Chi tiết vé cược Tài Xỉu, Lô Đề, Bóng Đá</small>
+          </div>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Footer Drawer -->
+    <div class="drawer-footer-royal">
+      <button class="logout-link" id="drawer-logout-btn">
+        <i class="fa-solid fa-power-off"></i> Đăng Xuất An Toàn
+      </button>
+      <div class="drawer-copy">BET367 ROYALE • Giấy Phép PAGCOR Quốc Tế 2026</div>
+    </div>
+  </aside>
+
+  <!-- NỘI DUNG CHÍNH (HERO SANG TRỌNG CASINO, BÓNG ĐÁ, TÀI XỈU, LÔ ĐỀ) -->
+    <main class="royal-main">
+    <!-- ==================== VIEW 1: SẢNH CHÍNH TỔNG QUAN ==================== -->
+    <div id="view-home" class="page-view active">
+      <section class="mega-hero-banner">
+      <div class="hero-curtain-overlay"></div>
+      <div class="container hero-inner-grid">
+        
+        <!-- Cột trái: Tiêu đề Bet367, Nạp tiền, Jackpot -->
+        <div class="hero-left-hero">
+          <div class="royal-tag">
+            <i class="fa-solid fa-award text-gold"></i>
+            <span>BET367 - THƯƠNG HIỆU CÁ CƯỢC HOÀNG GIA ĐẲNG CẤP SỐ 1</span>
+          </div>
+          <h1 class="hero-headline">
+            BET<span class="gold-text-gradient">367</span> ROYALE<br>
+            THẮNG LỚN <span class="white-text-glow">MỖI GIÂY</span>
+          </h1>
+          <p class="hero-subtext">
+            Sân chơi thượng hạng: <strong>Tài Xỉu MD5 cân cửa xanh chín</strong>, <strong>Lô Đề 1 ăn 99.5 cao nhất Việt Nam</strong>, Kèo Bóng Đá quốc tế và Live Casino đẳng cấp 5 sao.
+          </p>
+
+          <!-- 2 Nút CTA Khủng: Nạp tiền ngay & Đăng ký -->
+          <div class="hero-cta-buttons">
+            <button class="btn btn-mega-gold" onclick="openModal('deposit-modal')">
+              <i class="fa-solid fa-bolt-lightning"></i>
+              <span>NẠP TIỀN NHẬN THƯỞNG 100%</span>
+            </button>
+            <button class="btn btn-mega-outline" onclick="openModal('register-modal')">
+              <i class="fa-solid fa-crown"></i>
+              <span>GIA NHẬP BET367 VIP</span>
+            </button>
+          </div>
+
+          <!-- Jackpot Ticker Động Trăm Tỷ -->
+          <div class="jackpot-counter-box">
+            <div class="jackpot-header">
+              <div class="jackpot-title">
+                <i class="fa-solid fa-trophy text-gold"></i>
+                <span>BET367 MEGA ROYAL JACKPOT:</span>
+              </div>
+              <span class="jackpot-status"><span class="green-dot"></span> ĐANG TĂNG</span>
+            </div>
+            <div class="jackpot-digits" id="jackpot-number">
+              188,954,230,000 <span class="currency-tag">VNĐ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột phải: Thẻ Trực Quan Sang Trọng (Thẻ Vàng VIP + Biểu Tượng Cúp, Tiền, Bóng Đá, Casino, Tài Xỉu, Lô Đề) -->
+        <div class="hero-right-visual">
+          <div class="royal-card-stack">
+            
+            <!-- Thẻ VIP Card Black & Gold dập nổi -->
+            <div class="vip-metal-card">
+              <div class="metal-card-top">
+                <div class="chip-metal"><i class="fa-solid fa-microchip"></i> BET367 GOLD PASS</div>
+                <div class="crest-mini"><i class="fa-solid fa-crown text-gold"></i> BET367 CLUB</div>
+              </div>
+              
+              <div class="metal-card-balance">
+                <span class="lbl-card">SỐ DƯ TÀI KHOẢN VIP</span>
+                <div class="val-card" id="hero-display-balance">0 ₫</div>
+              </div>
+
+              <div class="metal-card-bottom">
+                <div>
+                  <small>CHỦ THẺ THƯỢNG LƯU</small>
+                  <strong>NEWPLAYER3667 • LEVEL 1</strong>
+                </div>
+                <div class="card-badges">
+                  <i class="fa-brands fa-cc-visa text-gold"></i>
+                  <i class="fa-brands fa-cc-mastercard text-gold"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 Ô Trực Quan Nổi Bật: Tài Xỉu, Lô Đề, Bóng Đá, Cúp Vàng -->
+            <div class="visual-quad-grid">
+              
+              <div class="quad-item quad-taixiu" onclick="navigateToPage('taixiu')">
+                <div class="quad-icon-badge bg-taixiu">
+                  <i class="fa-solid fa-dice-d6"></i>
+                </div>
+                <div class="quad-text">
+                  <strong>TÀI XỈU MD5</strong>
+                  <span>Cân Cửa Xanh Chín 100%</span>
+                </div>
+                <span class="live-blink">LIVE</span>
+              </div>
+
+              <div class="quad-item quad-lode" onclick="navigateToPage('lode')">
+                <div class="quad-icon-badge bg-lode">
+                  <i class="fa-solid fa-clover"></i>
+                </div>
+                <div class="quad-text">
+                  <strong>LÔ ĐỀ 1 ĂN 99.5</strong>
+                  <span>Xổ Số 3 Miền Bắc - Trung - Nam</span>
+                </div>
+                <span class="gold-tag">HOT</span>
+              </div>
+
+              <div class="quad-item quad-football" onclick="navigateToPage('sports')">
+                <div class="quad-icon-badge bg-soccer">
+                  <i class="fa-solid fa-futbol"></i>
+                </div>
+                <div class="quad-text">
+                  <strong>BÓNG ĐÁ ĐỈNH CAO</strong>
+                  <span>Hơn 500+ Kèo Ngoại Hạng Anh</span>
+                </div>
+                <i class="fa-solid fa-arrow-trend-up trend-icon"></i>
+              </div>
+
+              <div class="quad-item quad-cup" onclick="navigateToPage('slots')">
+                <div class="quad-icon-badge bg-cup-gold">
+                  <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div class="quad-text">
+                  <strong>TRANH CÚP 50 TỶ</strong>
+                  <span>Thưởng Nạp & Rút Siêu Tốc</span>
+                </div>
+                <span class="auto-tag">TỰ ĐỘNG</span>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      <!-- Sảnh Cổng Game Đa Mục Thượng Lưu -->
+      <section class="container royal-games-section" style="margin-top: 10px;">
+        <div class="section-title-wrap">
+          <div class="line-gold"></div>
+          <div class="title-box">
+            <i class="fa-solid fa-crown text-gold"></i>
+            <h2>DANH MỤC TRÒ CHƠI BET367 THƯỢNG HẠNG</h2>
+            <p>Chọn trò chơi yêu thích để tham gia bàn cược riêng biệt hoặc xem hướng dẫn chi tiết</p>
+          </div>
+          <div class="line-gold"></div>
+        </div>
+
+        <!-- Lưới Cổng Trò Chơi -->
+        <div class="hub-portal-grid">
+          
+          <!-- Cổng 1: Tài Xỉu MD5 -->
+          <div class="hub-card">
+            <div class="hub-card-thumb taixiu-thumb">
+              <span class="hub-badge hot">HOT NHẤT</span>
+              <div class="hub-thumb-icon text-gold"><i class="fa-solid fa-dice-d6"></i></div>
+            </div>
+            <div class="hub-card-body">
+              <h3 class="hub-card-title">Tài Xỉu MD5 Hoàng Gia</h3>
+              <p class="hub-card-desc">Bát úp che kín xúc xắc, cân cửa không phế, thuật toán MD5 minh bạch tuyệt đối. Tỷ lệ thưởng 1 ăn 1.98.</p>
+              <div class="hub-stats-row">
+                <span class="stat-rate"><i class="fa-solid fa-trophy"></i> Thưởng 1 : 1.98</span>
+                <span class="stat-online"><i class="fa-solid fa-user-group"></i> 24,850 Đang Chơi</span>
+              </div>
+              <div class="hub-card-actions">
+                <button class="btn-play-game" onclick="navigateToPage('taixiu')">
+                  <i class="fa-solid fa-play"></i> VÀO BÀN CHƠI
+                </button>
+                <button class="btn-guide-game" onclick="navigateToPage('taixiu', true)">
+                  <i class="fa-solid fa-book-open"></i> HƯỚNG DẪN
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cổng 2: Lô Đề 1 Ăn 99.5 -->
+          <div class="hub-card">
+            <div class="hub-card-thumb lode-thumb">
+              <span class="hub-badge exclusive">ĂN 99.5 CAO NHẤT</span>
+              <div class="hub-thumb-icon text-emerald"><i class="fa-solid fa-clover"></i></div>
+            </div>
+            <div class="hub-card-body">
+              <h3 class="hub-card-title">Lô Đề 1 Ăn 99.5 (Xổ Số 3 Miền)</h3>
+              <p class="hub-card-desc">Đánh đề đặc biệt 1 ăn 99.5, bao lô, lô xiên 2/3/4, 3 càng 1 ăn 960. Mở thưởng Bắc - Trung - Nam trực tiếp.</p>
+              <div class="hub-stats-row">
+                <span class="stat-rate"><i class="fa-solid fa-star"></i> Tỷ Lệ 1 : 99.5</span>
+                <span class="stat-online"><i class="fa-solid fa-clock"></i> Quay Thưởng 18h15</span>
+              </div>
+              <div class="hub-card-actions">
+                <button class="btn-play-game" onclick="navigateToPage('lode')">
+                  <i class="fa-solid fa-play"></i> VÀO CHỐT SỐ
+                </button>
+                <button class="btn-guide-game" onclick="navigateToPage('lode', true)">
+                  <i class="fa-solid fa-book-open"></i> HƯỚNG DẪN
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cổng 3: Live Casino -->
+          <div class="hub-card">
+            <div class="hub-card-thumb casino-thumb">
+              <span class="hub-badge live">LIVE 4K</span>
+              <div class="hub-thumb-icon text-gold"><i class="fa-solid fa-heart"></i></div>
+            </div>
+            <div class="hub-card-body">
+              <h3 class="hub-card-title">Live Casino Thượng Lưu 4K</h3>
+              <p class="hub-card-desc">Bàn nỉ nhung Baccarat Royale, Vòng quay Roulette Châu Âu 37 số, Rồng Hổ cùng Dealer quốc tế xinh đẹp.</p>
+              <div class="hub-stats-row">
+                <span class="stat-rate"><i class="fa-solid fa-coins"></i> Baccarat / Roulette</span>
+                <span class="stat-online"><i class="fa-solid fa-video"></i> 18 Bàn Trực Tiếp</span>
+              </div>
+              <div class="hub-card-actions">
+                <button class="btn-play-game" onclick="navigateToPage('casino')">
+                  <i class="fa-solid fa-play"></i> VÀO SÒNG BẠC
+                </button>
+                <button class="btn-guide-game" onclick="navigateToPage('casino', true)">
+                  <i class="fa-solid fa-book-open"></i> HƯỚNG DẪN
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cổng 4: Kèo Thể Thao -->
+          <div class="hub-card">
+            <div class="hub-card-thumb sports-thumb">
+              <span class="hub-badge live">CÚP C1 LIVE</span>
+              <div class="hub-thumb-icon text-white"><i class="fa-solid fa-futbol"></i></div>
+            </div>
+            <div class="hub-card-body">
+              <h3 class="hub-card-title">Kèo Bóng Đá & Thể Thao</h3>
+              <p class="hub-card-desc">Trực tiếp Ngoại Hạng Anh, Champions League, La Liga. Kèo chấp Châu Á, Kèo Tài Xỉu, Kèo 1X2 cập nhật từng giây.</p>
+              <div class="hub-stats-row">
+                <span class="stat-rate"><i class="fa-solid fa-fire text-gold"></i> 1,500+ Trận Hôm Nay</span>
+                <span class="stat-online"><i class="fa-solid fa-bolt"></i> Ăn 0.99 Cực Cao</span>
+              </div>
+              <div class="hub-card-actions">
+                <button class="btn-play-game" onclick="navigateToPage('sports')">
+                  <i class="fa-solid fa-play"></i> VÀO BẮT KÈO
+                </button>
+                <button class="btn-guide-game" onclick="navigateToPage('sports', true)">
+                  <i class="fa-solid fa-book-open"></i> ĐỌC KÈO BÓNG
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cổng 5: Nổ Hũ Thần Tài -->
+          <div class="hub-card">
+            <div class="hub-card-thumb slots-thumb">
+              <span class="hub-badge hot">188 TỶ</span>
+              <div class="hub-thumb-icon text-gold"><i class="fa-solid fa-gem"></i></div>
+            </div>
+            <div class="hub-card-body">
+              <h3 class="hub-card-title">Nổ Hũ Thần Tài 777</h3>
+              <p class="hub-card-desc">Vương quốc Slots 5 cuộn, biểu tượng Kim Cương, Vương Miện, Chuông Vàng. Cơ hội trúng Hũ Jackpot 188 tỷ VND.</p>
+              <div class="hub-stats-row">
+                <span class="stat-rate"><i class="fa-solid fa-gem"></i> RTP 98.8%</span>
+                <span class="stat-online"><i class="fa-solid fa-award"></i> Hũ Đang Nổ Khủng</span>
+              </div>
+              <div class="hub-card-actions">
+                <button class="btn-play-game" onclick="navigateToPage('slots')">
+                  <i class="fa-solid fa-play"></i> QUAY HŨ NGAY
+                </button>
+                <button class="btn-guide-game" onclick="navigateToPage('slots', true)">
+                  <i class="fa-solid fa-book-open"></i> HƯỚNG DẪN
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+    <!-- ==================== VIEW 2: TRÒ CHƠI TÀI XỈU MD5 ==================== -->
+    <div id="view-taixiu" class="page-view">
+      
+      <!-- Thanh Điều Hướng Trang Con -->
+      <div class="container">
+        <div class="page-header-bar">
+          <div class="page-header-left">
+            <button class="btn-back-lobby" onclick="navigateToPage('home')">
+              <i class="fa-solid fa-arrow-left"></i> VỀ SẢNH CHÍNH
+            </button>
+            <div class="breadcrumb-path">
+              <a href="javascript:void(0)" onclick="navigateToPage('home')">Trang Chủ</a>
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+              <span class="current">Tài Xỉu MD5 Bát Úp</span>
+            </div>
+          </div>
+          <div class="page-header-right">
+            <div class="page-user-wallet">Ví Khả Dụng: <strong id="tx-wallet-badge">0 ₫</strong></div>
+            <button class="btn btn-gold-sm" onclick="openModal('deposit-modal')"><i class="fa-solid fa-plus"></i> NẠP TIỀN</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bàn Cược Tài Xỉu -->
+      <section class="royal-section container" id="taixiu-section">
+      <div class="section-title-wrap">
+        <div class="line-gold"></div>
+        <div class="title-box">
+          <i class="fa-solid fa-dice-d6 text-gold"></i>
+          <h2>SẢNH TÀI XỈU MD5 BET367</h2>
+          <p>Thuật toán minh bạch tuyệt đối • Trả thưởng tức thì 1 giây</p>
+        </div>
+        <div class="line-gold"></div>
+      </div>
+
+      <!-- Bàn Chơi Tài Xỉu Trực Tuyến -->
+      <div class="taixiu-game-table">
+        <!-- Đỉnh bàn: Đồng hồ đếm ngược phiên cược -->
+        <div class="table-top-bar">
+          <div class="round-id"><i class="fa-solid fa-hashtag text-gold"></i> Phiên: <strong id="tx-round-id">#367899</strong></div>
+          <div class="round-timer-box">
+            <span>Thời gian đặt cược:</span>
+            <div class="timer-countdown" id="tx-countdown">35s</div>
+          </div>
+          <div class="md5-hash" title="Mã hóa MD5 chuẩn quốc tế">
+            MD5: <span class="hash-code">e9b7a13c98...88ff</span>
+          </div>
+        </div>
+
+        <!-- Trung tâm: Bát đĩa lắc xúc xắc & 2 Cửa Cược Tài - Xỉu -->
+        <div class="taixiu-arena">
+          
+          <!-- Cửa XỈU (4-10) -->
+          <div class="bet-gate-box gate-xiu" id="gate-xiu" onclick="selectBetGate('XIU')">
+            <div class="gate-header">
+              <span class="gate-title">XỈU</span>
+              <span class="gate-range">4 - 10</span>
+            </div>
+            <div class="gate-stats">
+              <div class="total-bet-val" id="xiu-total-money">1,248,500,000 ₫</div>
+              <small class="players-count"><i class="fa-solid fa-users"></i> <span id="xiu-players">412</span> người cược</small>
+            </div>
+            <button class="btn btn-bet-gate xiu-btn" type="button">
+              <i class="fa-solid fa-hand-pointer"></i> CHỌN XỈU
+            </button>
+            <div class="user-bet-tag" id="user-bet-xiu-tag" style="display: none;">
+              <i class="fa-solid fa-circle-check"></i> ĐANG CƯỢC: <strong id="bet-amt-xiu-display">100K</strong>
+            </div>
+          </div>
+
+          <!-- Khu vực Đĩa & Hộp Lắc Hoàng Gia (Khi lắc chỉ cái hộp lắc, ẩn hoàn toàn xúc xắc) -->
+          <div class="dice-bowl-plate">
+            <div class="shaker-arena-box" id="shaker-arena-box">
+              
+              <!-- 1. HỘP LẮC HOÀNG GIA (CHỈ CÁI HỘP NÀY LẮC KHI ĐANG LẮC, XÚC XẮC BỊ ẨN TUYỆT ĐỐI) -->
+              <div class="royal-shaker-box" id="royal-shaker-box">
+                <div class="shaker-cup-top">
+                  <div class="shaker-crown-knob"><i class="fa-solid fa-crown text-gold"></i></div>
+                </div>
+                <div class="shaker-cup-body">
+                  <div class="shaker-metal-band">
+                    <span>BET367 MD5</span>
+                  </div>
+                  <div class="shaker-indicator" id="shaker-status-text">HỘP ĐÃ ĐẬY KÍN</div>
+                </div>
+              </div>
+
+              <!-- 2. SÂN XÚC XẮC (CHỈ HIỆN RA SAU KHI LẮC XONG VÀ HỘP NHẤC LÊN) -->
+              <div class="revealed-dice-stage" id="revealed-dice-stage" style="display: none;">
+                <div class="stage-plate">
+                  <div class="dice-group" id="dice-group">
+                    <div class="dice-cube" id="dice-1"><i class="fa-solid fa-dice-two"></i></div>
+                    <div class="dice-cube" id="dice-2"><i class="fa-solid fa-dice-four"></i></div>
+                    <div class="dice-cube" id="dice-3"><i class="fa-solid fa-dice-five"></i></div>
+                  </div>
+                </div>
+                <div class="dice-sum-badge" id="dice-total-display">Tổng: 11 (TÀI)</div>
+              </div>
+
+            </div>
+
+            <!-- Nút Thao Tác: Lắc Hộp -->
+            <div class="bowl-action-btns">
+              <button class="btn btn-shake-bowl" id="btn-start-shake" onclick="handleStartShake()">
+                <i class="fa-solid fa-rotate"></i> LẮC HỘP XÚC XẮC
+              </button>
+            </div>
+          </div>
+
+          <!-- Cửa TÀI (11-17) -->
+          <div class="bet-gate-box gate-tai" id="gate-tai" onclick="selectBetGate('TAI')">
+            <div class="gate-header">
+              <span class="gate-title">TÀI</span>
+              <span class="gate-range">11 - 17</span>
+            </div>
+            <div class="gate-stats">
+              <div class="total-bet-val" id="tai-total-money">1,495,200,000 ₫</div>
+              <small class="players-count"><i class="fa-solid fa-users"></i> <span id="tai-players">528</span> người cược</small>
+            </div>
+            <button class="btn btn-bet-gate tai-btn" type="button">
+              <i class="fa-solid fa-hand-pointer"></i> CHỌN TÀI
+            </button>
+            <div class="user-bet-tag" id="user-bet-tai-tag" style="display: none;">
+              <i class="fa-solid fa-circle-check"></i> ĐANG CƯỢC: <strong id="bet-amt-tai-display">100K</strong>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Thanh trạng thái cược hiện tại -->
+        <div class="current-bet-notice" id="current-bet-notice">
+          <i class="fa-solid fa-circle-info text-gold"></i>
+          <span id="bet-notice-text">Quý khách vui lòng chọn cửa <strong>TÀI</strong> hoặc <strong>XỈU</strong> và mức cược trước khi bấm lắc bát!</span>
+        </div>
+
+        <!-- Thanh chọn chip tiền cược nhanh -->
+        <div class="chip-selector-bar">
+          <span class="chip-label"><i class="fa-solid fa-coins text-gold"></i> Mức cược:</span>
+          <div class="chip-coins-list">
+            <button class="coin-btn" onclick="setTaixiuChip(10000)">10K</button>
+            <button class="coin-btn" onclick="setTaixiuChip(50000)">50K</button>
+            <button class="coin-btn active" onclick="setTaixiuChip(100000)">100K</button>
+            <button class="coin-btn" onclick="setTaixiuChip(500000)">500K</button>
+            <button class="coin-btn" onclick="setTaixiuChip(1000000)">1M</button>
+            <button class="coin-btn" onclick="setTaixiuChip(5000000)">5M</button>
+            <button class="coin-btn coin-allin" onclick="setTaixiuChip(10000000)">TẤT TAY</button>
+          </div>
+          <div class="bet-input-box">
+            <input type="number" id="tx-bet-amount" value="100000" min="10000" step="10000">
+            <button class="btn-cancel-bet" onclick="cancelCurrentBet()" title="Hủy cửa cược hiện tại"><i class="fa-solid fa-xmark"></i> Hủy Cược</button>
+          </div>
+        </div>
+
+        <!-- Soi Cầu Tài Xỉu mini -->
+        <div class="soi-cau-bar">
+          <span class="cau-lbl">Cầu gần đây:</span>
+          <div class="cau-dots-list" id="cau-dots-list">
+            <span class="dot-tai">T</span>
+            <span class="dot-tai">T</span>
+            <span class="dot-xiu">X</span>
+            <span class="dot-tai">T</span>
+            <span class="dot-xiu">X</span>
+            <span class="dot-xiu">X</span>
+            <span class="dot-tai">T</span>
+            <span class="dot-tai">T</span>
+            <span class="dot-xiu">X</span>
+            <span class="dot-tai">T</span>
+          </div>
+          <span class="cau-stat">Tài 60% - Xỉu 40%</span>
+        </div>
+
+        <!-- ==================== BẢNG LỊCH SỬ LẮC TÀI XỈU ==================== -->
+        <div class="taixiu-history-section">
+          <div class="history-title-row">
+            <div class="hist-title">
+              <i class="fa-solid fa-clock-rotate-left text-gold"></i>
+              <h3>LỊCH SỬ CÁC PHIÊN LẮC TÀI XỈU</h3>
+            </div>
+            <div class="hist-actions">
+              <span class="total-rounds-tag">Tổng: <strong id="total-rounds-count">10</strong> phiên</span>
+              <button class="btn-refresh-hist" onclick="refreshTxHistory()"><i class="fa-solid fa-arrows-rotate"></i> Làm mới</button>
+            </div>
+          </div>
+
+          <div class="history-table-responsive">
+            <table class="tx-history-table">
+              <thead>
+                <tr>
+                  <th>PHIÊN</th>
+                  <th>XÚC XẮC</th>
+                  <th>TỔNG</th>
+                  <th>KẾT QUẢ</th>
+                  <th>CỬA BẠN ĐẶT</th>
+                  <th>TIỀN THẮNG / THUA</th>
+                  <th>THỜI GIAN</th>
+                </tr>
+              </thead>
+              <tbody id="tx-history-tbody">
+                <!-- Được render động bởi JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      <!-- HƯỚNG DẪN & CÁCH CHƠI TÀI XỈU CHI TIẾT -->
+      <section class="container" id="taixiu-guide">
+        <div class="game-guide-box">
+          <div class="guide-box-header">
+            <div class="guide-title-block">
+              <h3><i class="fa-solid fa-book-bookmark"></i> HƯỚNG DẪN & LUẬT CHƠI TÀI XỈU MD5</h3>
+              <p>Toàn bộ quy tắc, bảng trả thưởng và mẹo soi cầu hiệu quả cho hội viên Bet367</p>
+            </div>
+            <span class="deck-shoe-badge"><i class="fa-solid fa-shield-halved"></i> Chuẩn MD5 Xanh Chín</span>
+          </div>
+
+          <div class="guide-pills-row">
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-dice text-gold"></i> 1. Quy Tắc Cơ Bản</h4>
+              <p>Tài Xỉu (Sic Bo) sử dụng <strong>3 viên xúc xắc 6 mặt</strong> (từ 1 đến 6). Tổng điểm 3 mặt dao động từ 3 đến 18 điểm.</p>
+              <ul>
+                <li><strong>Cửa XỈU:</strong> Thắng khi tổng điểm từ <strong>4 đến 10</strong>.</li>
+                <li><strong>Cửa TÀI:</strong> Thắng khi tổng điểm từ <strong>11 đến 17</strong>.</li>
+                <li><strong>Bộ Ba Đồng Nhất (Bão):</strong> Khi 3 viên ra cùng 1 số (ví dụ 1-1-1, 6-6-6), nhà cái thu tiền hoặc trả thưởng tỷ lệ Bão.</li>
+              </ul>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-calculator text-emerald"></i> 2. Tỷ Lệ Trả Thưởng</h4>
+              <div class="payout-table-wrap">
+                <table class="payout-table">
+                  <thead>
+                    <tr><th>Cửa Cược</th><th>Điểm Thắng</th><th>Tỷ Lệ Ăn</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td><strong>XỈU</strong></td><td>Tổng 4 - 10</td><td><strong class="text-gold">1 : 1.98</strong></td></tr>
+                    <tr><td><strong>TÀI</strong></td><td>Tổng 11 - 17</td><td><strong class="text-gold">1 : 1.98</strong></td></tr>
+                    <tr><td><strong>BÃO BẤT KỲ</strong></td><td>3 viên giống nhau</td><td><strong class="text-emerald">1 : 30</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-route text-blue"></i> 3. Bí Quyết Soi Cầu</h4>
+              <ul>
+                <li><strong>Cầu Bệt (Dây):</strong> Kết quả ra liên tục một cửa TÀI hoặc XỈU từ 4 ván trở lên. Nuôi cầu đến khi bẻ.</li>
+                <li><strong>Cầu Đảo 1 - 1:</strong> Kết quả luân phiên Tài - Xỉu - Tài - Xỉu đều đặn.</li>
+                <li><strong>Cầu 2 - 2 hoặc 3 - 3:</strong> Ra 2 ván Tài rồi 2 ván Xỉu, quan sát bảng chấm soi cầu để nhận diện nhịp cầu.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tips-callout">
+            <i class="fa-solid fa-lightbulb text-gold"></i> <strong>Lưu ý dành cho người chơi:</strong> Quý khách phải chọn cửa <strong>TÀI</strong> hoặc <strong>XỈU</strong> và mức cược trước khi bấm lắc bát. Trong lúc hộp đang rung lắc, xúc xắc hoàn toàn được giấu kín để đảm bảo tính ngẫu nhiên và hồi hộp cao nhất!
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- ==================== VIEW 3: TRÒ CHƠI LÔ ĐỀ 1 ĂN 99.5 ==================== -->
+    <div id="view-lode" class="page-view">
+      
+      <!-- Thanh Điều Hướng Trang Con -->
+      <div class="container">
+        <div class="page-header-bar">
+          <div class="page-header-left">
+            <button class="btn-back-lobby" onclick="navigateToPage('home')">
+              <i class="fa-solid fa-arrow-left"></i> VỀ SẢNH CHÍNH
+            </button>
+            <div class="breadcrumb-path">
+              <a href="javascript:void(0)" onclick="navigateToPage('home')">Trang Chủ</a>
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+              <span class="current">Lô Đề 1 Ăn 99.5 (Xổ Số 3 Miền)</span>
+            </div>
+          </div>
+          <div class="page-header-right">
+            <div class="page-user-wallet">Ví Khả Dụng: <strong id="lode-wallet-badge">0 ₫</strong></div>
+            <button class="btn btn-gold-sm" onclick="openModal('deposit-modal')"><i class="fa-solid fa-plus"></i> NẠP TIỀN</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bàn Chơi Lô Đề -->
+      <section class="royal-section container" id="lode-section">
+      <div class="section-title-wrap">
+        <div class="line-gold"></div>
+        <div class="title-box">
+          <i class="fa-solid fa-clover text-emerald"></i>
+          <h2>SẢNH ĐÁNH ĐỀ - XỔ SỐ 3 MIỀN BET367</h2>
+          <p>Tỷ lệ trả thưởng 1 ăn 99.5 cao nhất thị trường • Đầy đủ Bao Lô, Đề Đặc Biệt, Lô Xiên, 3 Càng</p>
+        </div>
+        <div class="line-gold"></div>
+      </div>
+
+      <div class="lode-layout-grid">
+        
+        <!-- Cột trái: Chọn Đài & Hình Thức Cược -->
+        <div class="lode-controls-panel">
+          <!-- Chọn Đài / Miền -->
+          <div class="lode-panel-box">
+            <label class="panel-sublabel"><i class="fa-solid fa-map-location-dot text-gold"></i> Chọn Đài Xổ Số:</label>
+            <div class="radio-tab-group">
+              <button class="station-tab active" onclick="switchStation(this, 'MB')">Miền Bắc (Hà Nội)</button>
+              <button class="station-tab" onclick="switchStation(this, 'MT')">Miền Trung</button>
+              <button class="station-tab" onclick="switchStation(this, 'MN')">Miền Nam</button>
+              <button class="station-tab highlight" onclick="switchStation(this, 'ST')">⚡ Siêu Tốc 1 Phút</button>
+            </div>
+          </div>
+
+          <!-- Chọn Hình thức Đánh đề -->
+          <div class="lode-panel-box">
+            <label class="panel-sublabel"><i class="fa-solid fa-tags text-gold"></i> Hình Thức Cược:</label>
+            <div class="bet-type-grid">
+              <div class="type-card active" onclick="selectLodeType(this, 'Đề Đặc Biệt', '1 Ăn 99.5')">
+                <strong>Đề Đặc Biệt</strong>
+                <span class="rate-tag">1 ăn 99.5</span>
+              </div>
+              <div class="type-card" onclick="selectLodeType(this, 'Bao Lô 2 Số', '1 Điểm ăn 99k')">
+                <strong>Bao Lô 2 Số</strong>
+                <span class="rate-tag">1 đ ăn 99k</span>
+              </div>
+              <div class="type-card" onclick="selectLodeType(this, 'Lô Xiên 2', '1 Ăn 17')">
+                <strong>Lô Xiên 2</strong>
+                <span class="rate-tag">1 ăn 17</span>
+              </div>
+              <div class="type-card" onclick="selectLodeType(this, '3 Càng Đặc Biệt', '1 Ăn 960')">
+                <strong>Đề 3 Càng</strong>
+                <span class="rate-tag">1 ăn 960</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bảng Tỷ Lệ Ăn Thưởng Bet367 -->
+          <div class="rate-summary-banner">
+            <i class="fa-solid fa-shield-halved text-gold"></i>
+            <div>
+              <strong>CAM KẾT BET367:</strong>
+              <p>Trả thưởng tự động ngay sau 18h30 có kết quả xổ số kiến thiết quốc gia.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột phải: Bảng Nhập & Chọn Số May Mắn -->
+        <div class="lode-selector-panel">
+          <div class="number-board-header">
+            <div>
+              <span class="current-type-lbl" id="current-lode-type">Đề Đặc Biệt Miền Bắc</span>
+              <small class="rate-highlight" id="current-lode-rate">Tỷ lệ: 1 ăn 99.5</small>
+            </div>
+            <div class="quick-pick-tools">
+              <button class="tool-btn" onclick="quickPickOdd()">Số Lẻ</button>
+              <button class="tool-btn" onclick="quickPickEven()">Số Chẵn</button>
+              <button class="tool-btn" onclick="clearSelectedNumbers()">Xóa Chọn</button>
+            </div>
+          </div>
+
+          <!-- Nhập số trực tiếp hoặc bấm chọn -->
+          <div class="number-input-field-wrap">
+            <label>Nhập các con số (cách nhau bởi dấu phẩy hoặc khoảng trắng):</label>
+            <input type="text" id="lode-numbers-input" placeholder="Ví dụ: 68, 86, 36, 79, 99" value="68, 86, 367">
+          </div>
+
+          <!-- Bảng số nhanh (00 - 99 đại diện các số vàng) -->
+          <div class="quick-numbers-grid" id="quick-numbers-grid">
+            <!-- Sinh bằng JavaScript -->
+          </div>
+
+          <!-- Khung Tiền Cược & Xác Nhận Chốt Đề -->
+          <div class="bet-checkout-row">
+            <div class="checkout-input-col">
+              <label>Tiền cược mỗi số (VNĐ):</label>
+              <input type="number" id="lode-stake-input" value="50000" min="1000" step="10000">
+            </div>
+            <div class="checkout-summary-col">
+              <div>Tổng tiền cược: <strong class="text-gold" id="lode-total-stake">150,000 ₫</strong></div>
+              <div>Tiền thắng ước tính: <strong class="text-emerald" id="lode-potential-win">4,975,000 ₫</strong></div>
+            </div>
+            <button class="btn btn-confirm-lode" onclick="confirmLodeBet()">
+              <i class="fa-solid fa-paper-plane"></i> CHỐT SỐ BET367
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+      <!-- HƯỚNG DẪN & CÁCH CHƠI LÔ ĐỀ CHI TIẾT -->
+      <section class="container" id="lode-guide">
+        <div class="game-guide-box">
+          <div class="guide-box-header">
+            <div class="guide-title-block">
+              <h3><i class="fa-solid fa-book-bookmark"></i> HƯỚNG DẪN & BẢNG TRẢ THƯỞNG LÔ ĐỀ 1 ĂN 99.5</h3>
+              <p>Chi tiết cách chơi Đề Đặc Biệt, Bao Lô, Lô Xiên và 3 Càng với tỷ lệ vô địch thị trường</p>
+            </div>
+            <span class="deck-shoe-badge"><i class="fa-solid fa-clover"></i> Trả Thưởng Tự Động 18h30</span>
+          </div>
+
+          <div class="guide-pills-row">
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-star text-gold"></i> 1. Đề Đặc Biệt (1 ăn 99.5)</h4>
+              <p>Dự đoán <strong>2 số cuối của Giải Đặc Biệt</strong> trong bảng kết quả xổ số kiến thiết của đài đã chọn.</p>
+              <ul>
+                <li>Ví dụ: Giải Đặc Biệt về <code>59368</code>. Quý khách đánh số <strong>68</strong> sẽ trúng thưởng.</li>
+                <li>Đánh <strong>10,000 ₫</strong> nhận về <strong>995,000 ₫</strong> tiền thưởng ròng.</li>
+              </ul>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-layer-group text-blue"></i> 2. Bao Lô 2 Số</h4>
+              <p>Dự đoán 2 số cuối của <strong>tất cả các giải</strong> mở thưởng.</p>
+              <ul>
+                <li>Miền Bắc: Gồm 27 giải (1 điểm = 27,000 ₫, ăn 99.5k).</li>
+                <li>Miền Nam & Miền Trung: Gồm 18 giải (1 điểm = 18,000 ₫, ăn 99.5k).</li>
+                <li>Nếu con số về N nháy thì tiền thưởng nhân lên N lần!</li>
+              </ul>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-gem text-emerald"></i> 3. Đánh 3 Càng & Lô Xiên</h4>
+              <ul>
+                <li><strong>3 Càng (1 ăn 960):</strong> Đoán đúng 3 số cuối của Giải Đặc Biệt. Đánh 10k nhận ngay <strong>9,600,000 ₫</strong>.</li>
+                <li><strong>Lô Xiên 2 (1 ăn 17):</strong> Chọn 2 cặp số, cả 2 số phải cùng xuất hiện trong bảng kết quả.</li>
+                <li><strong>Lô Xiên 3 (1 ăn 65):</strong> Chọn 3 cặp số cùng về trong ngày.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tips-callout">
+            <i class="fa-solid fa-clock text-gold"></i> <strong>Lịch quay thưởng xổ số hàng ngày:</strong> 
+            Miền Nam mở thưởng lúc <strong>16h15</strong>, Miền Trung mở thưởng lúc <strong>17h15</strong>, Miền Bắc mở thưởng lúc <strong>18h15</strong>. Hệ thống Bet367 nhận cược đến trước giờ quay 5 phút và tự động đối soát trả thưởng sau khi có kết quả chính thức!
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- ==================== VIEW 4: TRÒ CHƠI LIVE CASINO ==================== -->
+    <div id="view-casino" class="page-view">
+      
+      <!-- Thanh Điều Hướng Trang Con -->
+      <div class="container">
+        <div class="page-header-bar">
+          <div class="page-header-left">
+            <button class="btn-back-lobby" onclick="navigateToPage('home')">
+              <i class="fa-solid fa-arrow-left"></i> VỀ SẢNH CHÍNH
+            </button>
+            <div class="breadcrumb-path">
+              <a href="javascript:void(0)" onclick="navigateToPage('home')">Trang Chủ</a>
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+              <span class="current">Live Casino Thượng Lưu 4K</span>
+            </div>
+          </div>
+          <div class="page-header-right">
+            <div class="page-user-wallet">Ví Khả Dụng: <strong id="casino-page-wallet-badge">0 ₫</strong></div>
+            <button class="btn btn-gold-sm" onclick="openModal('deposit-modal')"><i class="fa-solid fa-plus"></i> NẠP TIỀN</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bàn Chơi Live Casino -->
+      <section class="royal-games-section container" id="casino">
+      <div class="section-title-wrap">
+        <div class="line-gold"></div>
+        <div class="title-box">
+          <i class="fa-solid fa-crown text-gold"></i>
+          <h2>SÒNG BẠC LIVE CASINO BET367 ROYALE</h2>
+          <p>Trải nghiệm sòng bài thượng lưu chuẩn quốc tế • Baccarat, Roulette, Rồng Hổ • Dealer 4K trực tiếp</p>
+        </div>
+        <div class="line-gold"></div>
+      </div>
+
+      <!-- Casino Arena Container -->
+      <div class="casino-arena-box">
+        
+        <!-- Top Live Bar & Dealer Status -->
+        <div class="casino-live-header">
+          <div class="dealer-live-info">
+            <span class="live-pulse-badge"><span class="pulse-dot"></span> LIVE 4K MACAU #08</span>
+            <div class="dealer-avatar-wrap">
+              <i class="fa-solid fa-user-tie text-gold"></i>
+              <span class="dealer-name">Dealer: <strong>Jessica Wang (VIP)</strong></span>
+            </div>
+            <span class="deck-shoe-badge"><i class="fa-solid fa-layer-group"></i> Hộp 8 Bộ Bài 100% Xanh Chín</span>
+          </div>
+
+          <!-- Tabs chọn Game Casino -->
+          <div class="casino-game-tabs" role="tablist" aria-label="Sảnh trò chơi Live Casino">
+            <button class="casino-tab-btn active" role="tab" id="tab-baccarat" aria-selected="true" aria-controls="casino-game-baccarat" onclick="switchCasinoGame('baccarat', this)">
+              <i class="fa-solid fa-heart text-danger"></i> BACCARAT ROYALE
+            </button>
+            <button class="casino-tab-btn" role="tab" id="tab-roulette" aria-selected="false" aria-controls="casino-game-roulette" onclick="switchCasinoGame('roulette', this)">
+              <i class="fa-solid fa-circle-notch text-gold"></i> ROULETTE CHÂU ÂU
+            </button>
+            <button class="casino-tab-btn" role="tab" id="tab-dragontiger" aria-selected="false" aria-controls="casino-game-dragontiger" onclick="switchCasinoGame('dragontiger', this)">
+              <i class="fa-solid fa-dragon text-warning"></i> RỒNG HỔ (DRAGON TIGER)
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== GAME 1: BACCARAT ROYALE ==================== -->
+        <div id="casino-game-baccarat" class="casino-game-pane active">
+          
+          <!-- Bàn Nỉ Nhung Xanh Ngọc Baccarat -->
+          <div class="baccarat-table-felt">
+            
+            <!-- Khu vực chia bài Dealer -->
+            <div class="baccarat-cards-stage">
+              
+              <!-- Cụm bài PLAYER (CON) -->
+              <div class="baccarat-hand-box player-hand">
+                <div class="hand-header">
+                  <span class="hand-badge badge-player"><i class="fa-solid fa-user"></i> PLAYER (CON)</span>
+                  <span class="score-badge" id="baccarat-player-score">0 Điểm</span>
+                </div>
+                <div class="cards-holder" id="baccarat-player-cards">
+                  <!-- Các lá bài sẽ render bằng JS -->
+                  <div class="card-slot empty"><i class="fa-solid fa-clone"></i> Lá 1</div>
+                  <div class="card-slot empty"><i class="fa-solid fa-clone"></i> Lá 2</div>
+                  <div class="card-slot empty"><i class="fa-solid fa-clone"></i> Lá 3</div>
+                </div>
+              </div>
+
+              <!-- VS Badge ở giữa bàn -->
+              <div class="baccarat-vs-center">
+                <div class="vs-circle">VS</div>
+                <div class="shoe-icon"><i class="fa-solid fa-box-archive text-gold"></i> HỘP BÀI</div>
+              </div>
+
+              <!-- Cụm bài BANKER (CÁI) -->
+              <div class="baccarat-hand-box banker-hand">
+                <div class="hand-header">
+                  <span class="hand-badge badge-banker"><i class="fa-solid fa-building-columns"></i> BANKER (CÁI)</span>
+                  <span class="score-badge" id="baccarat-banker-score">0 Điểm</span>
+                </div>
+                <div class="cards-holder" id="baccarat-banker-cards">
+                  <!-- Các lá bài sẽ render bằng JS -->
+                  <div class="card-slot empty"><i class="fa-solid fa-clone"></i> Lá 1</div>
+                  <div class="card-slot empty"><i class="fa-solid fa-clone"></i> Lá 2</div>
+                  <div class="card-slot empty"><i class="fa-solid fa-clone"></i> Lá 3</div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Các Cửa Đặt Cược Baccarat (Player, Banker, Tie, Pairs) -->
+            <div class="baccarat-betting-grid">
+              
+              <!-- Cửa Con Đôi (1 ăn 11) -->
+              <div class="baccarat-gate-card gate-pair" id="bgate-player-pair" onclick="placeCasinoBet('P_PAIR', this)">
+                <div class="gate-title">CON ĐÔI</div>
+                <div class="gate-rate">1 ĂN 11</div>
+                <div class="gate-chip-placed" id="chip-P_PAIR"></div>
+              </div>
+
+              <!-- Cửa PLAYER (CON - 1 ăn 1) -->
+              <div class="baccarat-gate-card gate-main gate-player" id="bgate-player" onclick="placeCasinoBet('PLAYER', this)">
+                <div class="gate-sub">TỶ LỆ 1:1</div>
+                <div class="gate-title">PLAYER (CON)</div>
+                <div class="gate-desc">Thắng khi điểm Con cao hơn</div>
+                <div class="gate-chip-placed" id="chip-PLAYER"></div>
+              </div>
+
+              <!-- Cửa TIE (HÒA - 1 ăn 8) -->
+              <div class="baccarat-gate-card gate-tie" id="bgate-tie" onclick="placeCasinoBet('TIE', this)">
+                <div class="gate-sub">TỶ LỆ 1:8</div>
+                <div class="gate-title">TIE (HÒA)</div>
+                <div class="gate-desc">Điểm 2 bên bằng nhau</div>
+                <div class="gate-chip-placed" id="chip-TIE"></div>
+              </div>
+
+              <!-- Cửa BANKER (CÁI - 1 ăn 0.95) -->
+              <div class="baccarat-gate-card gate-main gate-banker" id="bgate-banker" onclick="placeCasinoBet('BANKER', this)">
+                <div class="gate-sub">TỶ LỆ 1:0.95</div>
+                <div class="gate-title">BANKER (CÁI)</div>
+                <div class="gate-desc">Thắng khi điểm Cái cao hơn</div>
+                <div class="gate-chip-placed" id="chip-BANKER"></div>
+              </div>
+
+              <!-- Cửa Cái Đôi (1 ăn 11) -->
+              <div class="baccarat-gate-card gate-pair" id="bgate-banker-pair" onclick="placeCasinoBet('B_PAIR', this)">
+                <div class="gate-title">CÁI ĐÔI</div>
+                <div class="gate-rate">1 ĂN 11</div>
+                <div class="gate-chip-placed" id="chip-B_PAIR"></div>
+              </div>
+
+            </div>
+
+            <!-- Bảng Soi Cầu Baccarat Bead Plate -->
+            <div class="baccarat-roadmap-box">
+              <div class="roadmap-header">
+                <span><i class="fa-solid fa-chart-line text-gold"></i> BẢNG SOI CẦU BACCARAT 777</span>
+                <span class="roadmap-legend">
+                  <span class="leg-item"><span class="leg-dot dot-player"></span> Con</span>
+                  <span class="leg-item"><span class="leg-dot dot-banker"></span> Cái</span>
+                  <span class="leg-item"><span class="leg-dot dot-tie"></span> Hòa</span>
+                </span>
+              </div>
+              <div class="roadmap-grid" id="baccarat-roadmap-dots">
+                <!-- Chấm cầu baccarat -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== GAME 2: ROULETTE CHÂU ÂU ==================== -->
+        <div id="casino-game-roulette" class="casino-game-pane">
+          <div class="roulette-table-felt">
+            
+            <!-- Vòng Quay Roulette 3D -->
+            <div class="roulette-stage">
+              <div class="roulette-wheel-wrapper">
+                <div class="roulette-wheel-outer">
+                  <div class="roulette-wheel-inner" id="roulette-wheel-wheel">
+                    <!-- Vòng quay xoay SVG -->
+                    <div class="wheel-center-cone"></div>
+                  </div>
+                  <div class="roulette-ball" id="roulette-ball"></div>
+                </div>
+              </div>
+
+              <!-- Bảng kết quả vòng quay trước -->
+              <div class="roulette-result-display">
+                <div class="roulette-last-tag">KẾT QUẢ VÒNG QUAY:</div>
+                <div class="roulette-result-badge" id="roulette-result-badge">
+                  <span class="num">--</span>
+                  <span class="meta">Chờ quay...</span>
+                </div>
+                <div class="roulette-history-pills" id="roulette-history-pills">
+                  <!-- Lịch sử các số gần nhất -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Bàn Cược Roulette -->
+            <div class="roulette-bet-board">
+              <div class="roulette-grid-row">
+                <div class="roulette-bet-cell bet-green" onclick="placeCasinoBet('ROU_0', this)">
+                  <strong>0 (XANH)</strong>
+                  <small>1 ĂN 35</small>
+                  <div class="gate-chip-placed" id="chip-ROU_0"></div>
+                </div>
+                <div class="roulette-bet-cell bet-red" onclick="placeCasinoBet('ROU_RED', this)">
+                  <strong>ĐỎ (RED)</strong>
+                  <small>1 ĂN 1</small>
+                  <div class="gate-chip-placed" id="chip-ROU_RED"></div>
+                </div>
+                <div class="roulette-bet-cell bet-black" onclick="placeCasinoBet('ROU_BLACK', this)">
+                  <strong>ĐEN (BLACK)</strong>
+                  <small>1 ĂN 1</small>
+                  <div class="gate-chip-placed" id="chip-ROU_BLACK"></div>
+                </div>
+                <div class="roulette-bet-cell bet-even" onclick="placeCasinoBet('ROU_EVEN', this)">
+                  <strong>CHẴN (EVEN)</strong>
+                  <small>1 ĂN 1</small>
+                  <div class="gate-chip-placed" id="chip-ROU_EVEN"></div>
+                </div>
+                <div class="roulette-bet-cell bet-odd" onclick="placeCasinoBet('ROU_ODD', this)">
+                  <strong>LẺ (ODD)</strong>
+                  <small>1 ĂN 1</small>
+                  <div class="gate-chip-placed" id="chip-ROU_ODD"></div>
+                </div>
+                <div class="roulette-bet-cell bet-low" onclick="placeCasinoBet('ROU_1_18', this)">
+                  <strong>1 - 18 (XỈU)</strong>
+                  <small>1 ĂN 1</small>
+                  <div class="gate-chip-placed" id="chip-ROU_1_18"></div>
+                </div>
+                <div class="roulette-bet-cell bet-high" onclick="placeCasinoBet('ROU_19_36', this)">
+                  <strong>19 - 36 (TÀI)</strong>
+                  <small>1 ĂN 1</small>
+                  <div class="gate-chip-placed" id="chip-ROU_19_36"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== GAME 3: RỒNG HỔ (DRAGON TIGER) ==================== -->
+        <div id="casino-game-dragontiger" class="casino-game-pane">
+          <div class="dragontiger-table-felt">
+            <div class="dt-cards-arena">
+              <!-- Bên RỒNG -->
+              <div class="dt-side-box dragon-side">
+                <div class="dt-side-title"><i class="fa-solid fa-dragon"></i> RỒNG (DRAGON)</div>
+                <div class="dt-card-container" id="dt-dragon-card">
+                  <div class="card-slot empty"><i class="fa-solid fa-dragon"></i> Chờ chia bài</div>
+                </div>
+                <div class="dt-score-label" id="dt-dragon-score">Chưa mở lá</div>
+              </div>
+
+              <!-- VS Phân Tranh -->
+              <div class="dt-vs-sword">
+                <i class="fa-solid fa-shield-halved text-gold"></i>
+                <span>QUYẾT ĐẤU</span>
+              </div>
+
+              <!-- Bên HỔ -->
+              <div class="dt-side-box tiger-side">
+                <div class="dt-side-title"><i class="fa-solid fa-paw"></i> HỔ (TIGER)</div>
+                <div class="dt-card-container" id="dt-tiger-card">
+                  <div class="card-slot empty"><i class="fa-solid fa-paw"></i> Chờ chia bài</div>
+                </div>
+                <div class="dt-score-label" id="dt-tiger-score">Chưa mở lá</div>
+              </div>
+            </div>
+
+            <!-- 3 Cửa cược Rồng Hổ -->
+            <div class="dt-betting-grid">
+              <div class="dt-bet-card bet-dragon" id="dtgate-dragon" onclick="placeCasinoBet('DT_DRAGON', this)">
+                <div class="dt-bet-icon"><i class="fa-solid fa-dragon"></i></div>
+                <div class="dt-bet-name">RỒNG (DRAGON)</div>
+                <div class="dt-bet-rate">1 ĂN 1</div>
+                <div class="gate-chip-placed" id="chip-DT_DRAGON"></div>
+              </div>
+
+              <div class="dt-bet-card bet-tie" id="dtgate-tie" onclick="placeCasinoBet('DT_TIE', this)">
+                <div class="dt-bet-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div class="dt-bet-name">HÒA (TIE)</div>
+                <div class="dt-bet-rate">1 ĂN 8</div>
+                <div class="gate-chip-placed" id="chip-DT_TIE"></div>
+              </div>
+
+              <div class="dt-bet-card bet-tiger" id="dtgate-tiger" onclick="placeCasinoBet('DT_TIGER', this)">
+                <div class="dt-bet-icon"><i class="fa-solid fa-paw"></i></div>
+                <div class="dt-bet-name">HỔ (TIGER)</div>
+                <div class="dt-bet-rate">1 ĂN 1</div>
+                <div class="gate-chip-placed" id="chip-DT_TIGER"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== THANH ĐIỀU KHIỂN & CHỌN CHIP CHUNG ==================== -->
+        <div class="casino-control-bar">
+          
+          <!-- Lựa chọn Chip Tiền Cược Sòng Bài -->
+          <div class="casino-chips-selector">
+            <span class="chips-label"><i class="fa-solid fa-coins text-gold"></i> MỆNH GIÁ CHIP:</span>
+            <div class="chips-tray">
+              <button class="casino-chip chip-50k active" onclick="selectCasinoChip(50000, this)">50K</button>
+              <button class="casino-chip chip-100k" onclick="selectCasinoChip(100000, this)">100K</button>
+              <button class="casino-chip chip-500k" onclick="selectCasinoChip(500000, this)">500K</button>
+              <button class="casino-chip chip-1m" onclick="selectCasinoChip(1000000, this)">1M</button>
+              <button class="casino-chip chip-5m" onclick="selectCasinoChip(5000000, this)">5M</button>
+              <button class="casino-chip chip-10m vip" onclick="selectCasinoChip(10000000, this)">10M 👑</button>
+            </div>
+          </div>
+
+          <!-- Các nút thao tác ván bài -->
+          <div class="casino-action-buttons">
+            <button class="btn btn-casino-clear" onclick="clearCasinoBets()">
+              <i class="fa-solid fa-trash-can"></i> HỦY CƯỢC
+            </button>
+            <button class="btn btn-casino-double" onclick="doubleCasinoBets()">
+              <i class="fa-solid fa-angles-up"></i> X2 CƯỢC
+            </button>
+            <button class="btn btn-casino-deal" id="btn-casino-deal" onclick="handleCasinoDealAction()">
+              <i class="fa-solid fa-play"></i> BẮT ĐẦU VÁN BÀI
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Trạng thái ván cược Casino -->
+        <div class="casino-status-footer">
+          <div class="status-left">
+            <span>Tổng cược: <strong class="text-gold" id="casino-total-staked">0 ₫</strong></span>
+            <span class="separator">•</span>
+            <span id="casino-status-text" class="text-silver">Chọn mệnh giá chip và nhấp vào cửa cược để bắt đầu!</span>
+          </div>
+          <div class="status-right">
+            <span class="casino-balance-tag">Ví Casino: <strong class="text-emerald" id="casino-wallet-bal">0 ₫</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+      <!-- HƯỚNG DẪN & CÁCH CHƠI CASINO CHI TIẾT -->
+      <section class="container" id="casino-guide">
+        <div class="game-guide-box">
+          <div class="guide-box-header">
+            <div class="guide-title-block">
+              <h3><i class="fa-solid fa-book-bookmark"></i> HƯỚNG DẪN & LUẬT CHƠI LIVE CASINO CHI TIẾT</h3>
+              <p>Luật chơi Baccarat Royale chuẩn Macau, Roulette Châu Âu 37 số và Rồng Hổ phân tranh</p>
+            </div>
+            <span class="deck-shoe-badge"><i class="fa-solid fa-crown"></i> Chuẩn Sòng Bạc Quốc Tế</span>
+          </div>
+
+          <div class="guide-pills-row">
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-heart text-danger"></i> 1. Luật Baccarat Royale</h4>
+              <p>Mỗi bên Con (Player) và Cái (Banker) được chia từ 2 đến 3 lá bài. Bên nào có tổng điểm gần <strong>9 điểm</strong> nhất sẽ thắng.</p>
+              <ul>
+                <li>Lá 10, J, Q, K tính <strong>0 điểm</strong>, Át (A) tính <strong>1 điểm</strong>, các lá 2-9 tính theo giá trị mặt bài.</li>
+                <li>Tổng điểm tính theo chữ số hàng đơn vị (Ví dụ 7 + 8 = 15 => Tính <strong>5 điểm</strong>).</li>
+                <li><strong>Thắng Tự Nhiên:</strong> Nếu 2 lá đầu được 8 hoặc 9 điểm, ván bài kết thúc ngay lập tức mà không rút thêm lá thứ 3.</li>
+              </ul>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-circle-notch text-gold"></i> 2. Luật Roulette Châu Âu</h4>
+              <p>Vòng quay bánh xe gồm <strong>37 ô số</strong> từ 0 đến 36 với 18 ô Đỏ, 18 ô Đen và 1 ô Số 0 Xanh Lá.</p>
+              <ul>
+                <li><strong>Cược Đỏ / Đen:</strong> Tỷ lệ 1 ăn 1.</li>
+                <li><strong>Cược Chẵn / Lẻ:</strong> Tỷ lệ 1 ăn 1.</li>
+                <li><strong>Cược 1-18 / 19-36:</strong> Tỷ lệ 1 ăn 1.</li>
+                <li><strong>Cược Độc Đắc Số 0:</strong> Tỷ lệ khủng <strong>1 ăn 35</strong> khi bóng lăn trúng ô số 0 xanh lá!</li>
+              </ul>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-dragon text-warning"></i> 3. Luật Rồng Hổ (Dragon Tiger)</h4>
+              <p>Trò chơi so bài 1 lá nhanh nhất sòng bài châu Á.</p>
+              <ul>
+                <li>Bên <strong>RỒNG (Dragon)</strong> nhận 1 lá, bên <strong>HỔ (Tiger)</strong> nhận 1 lá.</li>
+                <li>Bên nào có lá bài giá trị cao hơn sẽ chiến thắng (Át là 1 điểm thấp nhất, K là 13 điểm cao nhất).</li>
+                <li>Cược Rồng ăn 1:1, Cược Hổ ăn 1:1, Cược Hòa ăn 1:8 (Khi hòa hoàn 50% tiền cược Rồng và Hổ).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- ==================== VIEW 5: KÈO THỂ THAO & BÓNG ĐÁ ==================== -->
+    <div id="view-sports" class="page-view">
+      
+      <!-- Thanh Điều Hướng Trang Con -->
+      <div class="container">
+        <div class="page-header-bar">
+          <div class="page-header-left">
+            <button class="btn-back-lobby" onclick="navigateToPage('home')">
+              <i class="fa-solid fa-arrow-left"></i> VỀ SẢNH CHÍNH
+            </button>
+            <div class="breadcrumb-path">
+              <a href="javascript:void(0)" onclick="navigateToPage('home')">Trang Chủ</a>
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+              <span class="current">Kèo Bóng Đá & Thể Thao Live</span>
+            </div>
+          </div>
+          <div class="page-header-right">
+            <div class="page-user-wallet">Ví Khả Dụng: <strong id="sports-wallet-badge">0 ₫</strong></div>
+            <button class="btn btn-gold-sm" onclick="openModal('deposit-modal')"><i class="fa-solid fa-plus"></i> NẠP TIỀN</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sàn Kèo Bóng Đá Trực Tiếp -->
+      <section class="container royal-games-section">
+        <div class="sports-arena-box">
+          <div class="section-title-wrap" style="margin-bottom: 24px;">
+            <div class="line-gold"></div>
+            <div class="title-box">
+              <i class="fa-solid fa-futbol text-white"></i>
+              <h2>BẢNG KÈO BÓNG ĐÁ TRỰC TIẾP HÔM NAY</h2>
+              <p>Tỷ lệ cược châu Á, Tài Xỉu và Châu Âu update từng giây</p>
+            </div>
+            <div class="line-gold"></div>
+          </div>
+
+          <div class="matches-list-grid">
+            
+            <!-- Trận 1 -->
+            <div class="match-card">
+              <div class="match-info-side">
+                <span class="league-name"><i class="fa-solid fa-trophy"></i> NGOẠI HẠNG ANH • VÒNG 28</span>
+                <div class="match-teams">Arsenal vs Chelsea</div>
+                <span class="match-time-tag"><i class="fa-regular fa-clock"></i> 22:30 Hôm Nay • Sân Emirates</span>
+              </div>
+              <div class="match-odds-grid">
+                <div class="odd-btn" onclick="selectSportsOdd('Arsenal (-0.5)', 1.95, this)">
+                  <span class="odd-label">Arsenal (-0.5)</span>
+                  <span class="odd-value">1.95</span>
+                </div>
+                <div class="odd-btn" onclick="selectSportsOdd('Tài (2.5)', 1.90, this)">
+                  <span class="odd-label">Tài (2.5 Trái)</span>
+                  <span class="odd-value">1.90</span>
+                </div>
+                <div class="odd-btn" onclick="selectSportsOdd('Chelsea (+0.5)', 1.97, this)">
+                  <span class="odd-label">Chelsea (+0.5)</span>
+                  <span class="odd-value">1.97</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trận 2 -->
+            <div class="match-card">
+              <div class="match-info-side">
+                <span class="league-name"><i class="fa-solid fa-award"></i> CHAMPIONS LEAGUE • TỨ KẾT</span>
+                <div class="match-teams">Real Madrid vs Manchester City</div>
+                <span class="match-time-tag"><i class="fa-regular fa-clock"></i> 02:00 Rạng Sáng • Bernabeu</span>
+              </div>
+              <div class="match-odds-grid">
+                <div class="odd-btn" onclick="selectSportsOdd('Real Madrid (0)', 1.98, this)">
+                  <span class="odd-label">Real Madrid (0)</span>
+                  <span class="odd-value">1.98</span>
+                </div>
+                <div class="odd-btn" onclick="selectSportsOdd('Tài (3.0)', 1.88, this)">
+                  <span class="odd-label">Tài (3.0 Trái)</span>
+                  <span class="odd-value">1.88</span>
+                </div>
+                <div class="odd-btn" onclick="selectSportsOdd('Man City (0)', 1.92, this)">
+                  <span class="odd-label">Man City (0)</span>
+                  <span class="odd-value">1.92</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Trận 3 -->
+            <div class="match-card">
+              <div class="match-info-side">
+                <span class="league-name"><i class="fa-solid fa-fire text-gold"></i> LA LIGA • EL CLASICO</span>
+                <div class="match-teams">Barcelona vs Atletico Madrid</div>
+                <span class="match-time-tag"><i class="fa-regular fa-clock"></i> 03:00 Ngày Mai • Camp Nou</span>
+              </div>
+              <div class="match-odds-grid">
+                <div class="odd-btn" onclick="selectSportsOdd('Barcelona (-0.75)', 1.96, this)">
+                  <span class="odd-label">Barca (-0.75)</span>
+                  <span class="odd-value">1.96</span>
+                </div>
+                <div class="odd-btn" onclick="selectSportsOdd('Xỉu (2.5)', 1.85, this)">
+                  <span class="odd-label">Xỉu (2.5 Trái)</span>
+                  <span class="odd-value">1.85</span>
+                </div>
+                <div class="odd-btn" onclick="selectSportsOdd('Atletico (+0.75)', 1.94, this)">
+                  <span class="odd-label">Atletico (+0.75)</span>
+                  <span class="odd-value">1.94</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Phiếu Cược Trực Tiếp (Bet Slip) -->
+          <div class="bet-slip-panel">
+            <div class="bet-slip-info">
+              <span class="bet-slip-label"><i class="fa-solid fa-receipt text-gold"></i> KÈO ĐANG CHỌN:</span>
+              <div class="bet-slip-name" id="selected-sports-odd-name">Chưa chọn kèo nào (Bấm chọn kèo ở trên)</div>
+              <div class="bet-slip-rate" id="selected-sports-odd-rate">Tỷ lệ: -</div>
+            </div>
+            <div class="bet-slip-action-wrap">
+              <div class="bet-slip-input-group">
+                <label for="sports-bet-stake" class="bet-slip-input-label">Tiền cược (VNĐ):</label>
+                <div class="bet-slip-input-inner">
+                  <input type="number" id="sports-bet-stake" value="200000" min="10000" step="50000" class="bet-slip-field">
+                  <span class="currency-tag">₫</span>
+                </div>
+              </div>
+              <button class="btn btn-bet-slip-confirm" onclick="confirmSportsBet()">
+                <i class="fa-solid fa-circle-check"></i> XÁC NHẬN ĐẶT KÈO
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HƯỚNG DẪN CÁCH ĐỌC KÈO BÓNG ĐÁ -->
+      <section class="container" id="sports-guide">
+        <div class="game-guide-box">
+          <div class="guide-box-header">
+            <div class="guide-title-block">
+              <h3><i class="fa-solid fa-book-bookmark"></i> HƯỚNG DẪN & CÁCH ĐỌC KÈO BÓNG ĐÁ CHO NGƯỜI MỚI</h3>
+              <p>Hiểu cặn kẽ Kèo Châu Á (Handicap), Kèo Tài Xỉu (Over/Under) và Kèo Châu Âu 1X2</p>
+            </div>
+            <span class="deck-shoe-badge"><i class="fa-solid fa-futbol"></i> Kèo Nhà Cái Chuẩn Quốc Tế</span>
+          </div>
+
+          <div class="guide-pills-row">
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-scale-balanced text-gold"></i> 1. Kèo Châu Á (Handicap)</h4>
+              <p>Đội mạnh hơn chấp đội yếu hơn một số bàn thắng nhất định.</p>
+              <ul>
+                <li><strong>Kèo Đồng Banh (0):</strong> Hai đội hòa nhau thì về tiền. Đội nào thắng thì người cược đội đó ăn trọn tiền.</li>
+                <li><strong>Kèo Chấp Nửa Trái (0.5):</strong> Cửa trên thắng từ 1 bàn trở lên thì ăn tiền. Nếu hòa hoặc thua thì cửa dưới ăn tiền.</li>
+                <li><strong>Kèo Nửa Một (0.75):</strong> Cửa trên thắng 1 bàn ăn nửa tiền, thắng từ 2 bàn trở lên ăn cả tiền.</li>
+              </ul>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-arrows-up-down text-emerald"></i> 2. Kèo Tài Xỉu (Over/Under)</h4>
+              <p>Dự đoán <strong>tổng số bàn thắng của cả hai đội</strong> trong 90 phút thi đấu chính thức.</p>
+              <ul>
+                <li><strong>Tài Xỉu 2.5:</strong> Nếu tổng số bàn từ <strong>3 bàn trở lên</strong> (2-1, 3-0, 2-2...) là TÀI. Nếu từ <strong>2 bàn trở xuống</strong> (0-0, 1-0, 1-1...) là XỈU.</li>
+                <li>Tỷ lệ cược tính theo công thức: <code>Tiền nhận = Tiền cược x Tỷ lệ Odd</code>.</li>
+              </ul>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-globe text-blue"></i> 3. Kèo Châu Âu (1X2)</h4>
+              <ul>
+                <li><strong>1:</strong> Đặt cược cho Đội Chủ Nhà (Home) thắng trận.</li>
+                <li><strong>X:</strong> Đặt cược cho Hai Đội Hòa (Draw) nhau sau 90 phút.</li>
+                <li><strong>2:</strong> Đặt cược cho Đội Khách (Away) thắng trận.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    <!-- ==================== VIEW 6: NỔ HŨ THẦN TÀI (SLOTS) ==================== -->
+    <div id="view-slots" class="page-view">
+      
+      <!-- Thanh Điều Hướng Trang Con -->
+      <div class="container">
+        <div class="page-header-bar">
+          <div class="page-header-left">
+            <button class="btn-back-lobby" onclick="navigateToPage('home')">
+              <i class="fa-solid fa-arrow-left"></i> VỀ SẢNH CHÍNH
+            </button>
+            <div class="breadcrumb-path">
+              <a href="javascript:void(0)" onclick="navigateToPage('home')">Trang Chủ</a>
+              <i class="fa-solid fa-chevron-right text-xs"></i>
+              <span class="current">Vương Quốc Nổ Hũ Thần Tài 777</span>
+            </div>
+          </div>
+          <div class="page-header-right">
+            <div class="page-user-wallet">Ví Khả Dụng: <strong id="slots-wallet-badge">0 ₫</strong></div>
+            <button class="btn btn-gold-sm" onclick="openModal('deposit-modal')"><i class="fa-solid fa-plus"></i> NẠP TIỀN</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Máy Quay Hũ Slots Tương Tác 5 Cuộn -->
+      <section class="container royal-games-section">
+        <div class="slot-machine-box">
+          <div class="section-title-wrap" style="margin-bottom: 20px;">
+            <div class="title-box">
+              <h2 style="font-size: 2.2rem; margin-top: 6px;">NỔ HŨ THẦN TÀI 777</h2>
+              <div class="jackpot-counter-box" style="margin: 14px auto 0;">
+                <span class="jackpot-tag"><i class="fa-solid fa-crown text-gold"></i> QUỸ HŨ JACKPOT:</span>
+                <span class="jackpot-number" id="slots-jackpot-num" style="font-size: 2.2rem;">188,954,230,000 <span class="currency-tag">VNĐ</span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Khung 5 Cuộn Slot -->
+          <div class="slot-reels-frame">
+            <div class="slot-reels-row">
+              <div class="slot-reel-box" id="reel-1">👑</div>
+              <div class="slot-reel-box" id="reel-2">💎</div>
+              <div class="slot-reel-box" id="reel-3">7️⃣</div>
+              <div class="slot-reel-box" id="reel-4">🪙</div>
+              <div class="slot-reel-box" id="reel-5">🔔</div>
+            </div>
+          </div>
+
+          <div class="text-sm font-bold text-slate-300" id="slot-result-text">Chọn mức cược và bấm "QUAY HŨ" để săn Jackpot trăm tỷ!</div>
+
+          <!-- Điều Khiển Máy Slot -->
+          <div class="slot-controls-row">
+            <div class="slot-bet-control-group">
+              <label for="slot-bet-level" class="slot-control-label"><i class="fa-solid fa-coins text-gold"></i> MỨC CƯỢC / VÒNG:</label>
+              <div class="slot-select-wrapper">
+                <select id="slot-bet-level" class="slot-bet-select" aria-label="Chọn mức cược mỗi vòng quay">
+                  <option value="20000">20,000 ₫</option>
+                  <option value="50000" selected>50,000 ₫</option>
+                  <option value="100000">100,000 ₫</option>
+                  <option value="500000">500,000 ₫</option>
+                  <option value="1000000">1,000,000 ₫ (VIP)</option>
+                </select>
+                <i class="fa-solid fa-chevron-down select-chevron"></i>
+              </div>
+            </div>
+
+            <button class="btn-spin-slot" id="btn-spin-slot" onclick="spinSlotMachine()">
+              <i class="fa-solid fa-rotate text-black"></i> QUAY HŨ
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- HƯỚNG DẪN & BẢNG TRẢ THƯỞNG NỔ HŨ -->
+      <section class="container" id="slots-guide">
+        <div class="game-guide-box">
+          <div class="guide-box-header">
+            <div class="guide-title-block">
+              <h3><i class="fa-solid fa-book-bookmark"></i> HƯỚNG DẪN & BẢNG TRẢ THƯỞNG NỔ HŨ (SLOTS)</h3>
+              <p>Chi tiết hệ số nhân thưởng, biểu tượng Wild, Scatter và quy tắc nổ hũ Jackpot</p>
+            </div>
+            <span class="deck-shoe-badge"><i class="fa-solid fa-gem"></i> Tỷ Lệ Nổ 98.8% RTP</span>
+          </div>
+
+          <div class="guide-pills-row">
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-trophy text-gold"></i> 1. Biểu Tượng & Hệ Số Thưởng</h4>
+              <div class="payout-table-wrap">
+                <table class="payout-table">
+                  <thead><tr><th>Biểu Tượng</th><th>Tên Gọi</th><th>3 Biểu Tượng</th><th>5 Biểu Tượng</th></tr></thead>
+                  <tbody>
+                    <tr><td>👑</td><td>Vương Miện Hoàng Kim</td><td>x10 lần</td><td><strong class="text-gold">NỔ JACKPOT TỶ PHÚ</strong></td></tr>
+                    <tr><td>💎</td><td>Kim Cương Xanh</td><td>x8 lần</td><td><strong class="text-gold">x500 lần cược</strong></td></tr>
+                    <tr><td>7️⃣</td><td>Số 7 May Mắn</td><td>x5 lần</td><td><strong class="text-gold">x250 lần cược</strong></td></tr>
+                    <tr><td>🪙</td><td>Đồng Xu Vàng</td><td>x3 lần</td><td><strong class="text-gold">x100 lần cược</strong></td></tr>
+                    <tr><td>🔔</td><td>Chuông Vàng</td><td>x2 lần</td><td><strong class="text-gold">x50 lần cược</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="guide-info-card">
+              <h4><i class="fa-solid fa-bolt text-emerald"></i> 2. Tính Năng Đặc Biệt</h4>
+              <ul>
+                <li><strong>Biểu Tượng WILD (Thay thế):</strong> Có thể thay thế cho bất kỳ biểu tượng nào khác để tạo thành dòng thắng lớn nhất.</li>
+                <li><strong>Biểu Tượng SCATTER:</strong> Xuất hiện từ 3 biểu tượng trở lên sẽ tặng ngay <strong>10 Vòng Quay Miễn Phí (Free Spins)</strong> không trừ tiền cược.</li>
+                <li><strong>Nổ Hũ Toàn Phần (Jackpot):</strong> Khi xuất hiện đủ 5 biểu tượng Vương Miện 👑 trên cùng 1 hàng, quý khách sẽ ôm trọn hũ Jackpot trăm tỷ!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ==================== CÁC MODAL HOÀNG GIA ==================== -->
+
+  <!-- 1. MODAL ĐĂNG NHẬP HOÀNG GIA -->
+  <div class="royal-modal" id="login-modal" role="dialog" aria-modal="true" aria-labelledby="login-modal-title">
+    <div class="modal-backdrop-royal" onclick="closeModal('login-modal')"></div>
+    <div class="modal-box royal-box-shine">
+      <button class="modal-close-royal" onclick="closeModal('login-modal')" aria-label="Đóng cửa sổ đăng nhập"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-header-royal">
+        <div class="gold-crest-icon"><i class="fa-solid fa-crown"></i></div>
+        <h2 id="login-modal-title">ĐĂNG NHẬP BET367</h2>
+        <p>Chào mừng quý hội viên quay trở lại Bet367 Club</p>
+      </div>
+
+      <form id="login-form" class="royal-form">
+        <div class="royal-input-group">
+          <label for="login-username"><i class="fa-solid fa-user text-gold"></i> Tên Đăng Nhập / Email</label>
+          <input type="text" id="login-username" placeholder="Nhập tên đăng nhập" value="newplayer3667" required>
+        </div>
+
+        <div class="royal-input-group">
+          <div class="pwd-label-row">
+            <label for="login-password"><i class="fa-solid fa-lock text-gold"></i> Mật Khẩu</label>
+            <a href="javascript:void(0)" class="gold-link" onclick="alert('Vui lòng liên hệ CSKH Bet367 để lấy lại mật khẩu.')">Quên mã?</a>
+          </div>
+          <div class="pwd-input-wrap">
+            <input type="password" id="login-password" value="12345678" placeholder="Nhập mật khẩu" required>
+            <button type="button" class="eye-toggle-btn" onclick="togglePasswordVisibility('login-password')" aria-label="Hiện hoặc ẩn mật khẩu"><i class="fa-regular fa-eye"></i></button>
+          </div>
+        </div>
+
+        <div class="royal-form-check">
+          <label class="gold-checkbox" for="remember-me">
+            <input type="checkbox" checked id="remember-me">
+            <span class="box-mark"></span>
+            Ghi nhớ phiên đăng nhập an toàn
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-gold-block">
+          <i class="fa-solid fa-key"></i> ĐĂNG NHẬP NGAY
+        </button>
+
+        <div class="modal-bottom-links">
+          <span>Chưa có thẻ thành viên?</span>
+          <a href="javascript:void(0)" class="gold-link-bold" onclick="switchModal('login-modal', 'register-modal')">Đăng ký nhận 100K tân thủ</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. MODAL ĐĂNG KÝ HOÀNG GIA -->
+  <div class="royal-modal" id="register-modal" role="dialog" aria-modal="true" aria-labelledby="register-modal-title">
+    <div class="modal-backdrop-royal" onclick="closeModal('register-modal')"></div>
+    <div class="modal-box royal-box-shine">
+      <button class="modal-close-royal" onclick="closeModal('register-modal')" aria-label="Đóng cửa sổ đăng ký"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-header-royal">
+        <div class="gold-crest-icon"><i class="fa-solid fa-user-plus"></i></div>
+        <h2 id="register-modal-title">ĐĂNG KÝ BET367 VIP</h2>
+        <p>Mở tài khoản bảo mật cao cấp trong 30 giây • Tặng ngay 100.000đ</p>
+      </div>
+
+      <form id="register-form" class="royal-form">
+        <div class="royal-input-group">
+          <label for="reg-fullname"><i class="fa-solid fa-id-card text-gold"></i> Họ và Tên (Trùng tên chủ thẻ ngân hàng)</label>
+          <input type="text" id="reg-fullname" placeholder="VÍ DỤ: NGUYEN VAN A" required>
+        </div>
+
+        <div class="royal-input-group">
+          <label for="reg-username"><i class="fa-solid fa-user text-gold"></i> Tên Tài Khoản Đăng Ký</label>
+          <input type="text" id="reg-username" placeholder="Tên đăng nhập (chữ & số)" required minlength="4">
+        </div>
+
+        <div class="royal-input-group">
+          <label for="reg-phone"><i class="fa-solid fa-phone text-gold"></i> Số Điện Thoại Zalo / Telegram</label>
+          <input type="tel" id="reg-phone" placeholder="Số điện thoại nhận khuyến mãi" required>
+        </div>
+
+        <div class="royal-input-group">
+          <label for="reg-password"><i class="fa-solid fa-lock text-gold"></i> Mật Khẩu Đăng Nhập</label>
+          <div class="pwd-input-wrap">
+            <input type="password" id="reg-password" placeholder="Mật khẩu bảo mật tối thiểu 6 ký tự" required minlength="6">
+            <button type="button" class="eye-toggle-btn" onclick="togglePasswordVisibility('reg-password')" aria-label="Hiện hoặc ẩn mật khẩu"><i class="fa-regular fa-eye"></i></button>
+          </div>
+        </div>
+
+        <div class="royal-input-group">
+          <label for="reg-confirm-password"><i class="fa-solid fa-shield-halved text-gold"></i> Nhập Lại Mật Khẩu</label>
+          <div class="pwd-input-wrap">
+            <input type="password" id="reg-confirm-password" placeholder="Xác nhận mật khẩu" required minlength="6">
+            <button type="button" class="eye-toggle-btn" onclick="togglePasswordVisibility('reg-confirm-password')" aria-label="Hiện hoặc ẩn mật khẩu"><i class="fa-regular fa-eye"></i></button>
+          </div>
+        </div>
+
+        <div class="bonus-notice-box">
+          <i class="fa-solid fa-gift text-gold"></i>
+          <span>Ưu đãi thành viên Bet367: <strong>+100% nạp đầu</strong>, Lô đề 1 ăn 99.5 và hoàn cược 1.5%.</span>
+        </div>
+
+        <button type="submit" class="btn btn-gold-block">
+          <i class="fa-solid fa-trophy"></i> HOÀN TẤT ĐĂNG KÝ BET367
+        </button>
+
+        <div class="modal-bottom-links">
+          <span>Đã có tài khoản?</span>
+          <a href="javascript:void(0)" class="gold-link-bold" onclick="switchModal('register-modal', 'login-modal')">Đăng nhập tại đây</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. MODAL NẠP TIỀN BET367 -->
+  <div class="royal-modal" id="deposit-modal" role="dialog" aria-modal="true" aria-labelledby="deposit-modal-title">
+    <div class="modal-backdrop-royal" onclick="closeModal('deposit-modal')"></div>
+    <div class="modal-box modal-box-large royal-box-shine">
+      <button class="modal-close-royal" onclick="closeModal('deposit-modal')" aria-label="Đóng cửa sổ nạp tiền"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-header-royal">
+        <div class="gold-crest-icon"><i class="fa-solid fa-circle-arrow-down"></i></div>
+        <h2 id="deposit-modal-title">NẠP TIỀN BET367</h2>
+        <p style="color: #94a3b8; font-size: 0.8rem; margin-top: 4px;">Kênh nạp tiền trực tuyến tự động 24/7 • Miễn phí 100%</p>
+      </div>
+
+      <div class="deposit-mega-layout">
+        
+        <!-- Cột trái: Kênh Nạp Tiền -->
+        <div class="deposit-channels-col">
+          <label class="channel-lbl"><i class="fa-solid fa-layer-group text-gold"></i> 1. PHƯƠNG THỨC NẠP TIỀN</label>
+          
+          <div class="channel-card active" data-method="demo-fast" onclick="selectDepositChannel(this, 'demo-fast')">
+            <div class="channel-icon-wrap"><i class="fa-solid fa-bolt text-gold"></i></div>
+            <div class="channel-text">
+              <strong>Nạp Nhanh VietQR 24/7</strong>
+              <small>Cộng tiền tự động siêu tốc trong 30 giây</small>
+            </div>
+            <span class="recommend-tag">KHUYÊN DÙNG</span>
+          </div>
+
+          <div class="channel-card" data-method="demo-bank" onclick="selectDepositChannel(this, 'demo-bank')">
+            <div class="channel-icon-wrap"><i class="fa-solid fa-building-columns text-emerald"></i></div>
+            <div class="channel-text">
+              <strong>Chuyển Khoản Ngân Hàng</strong>
+              <small>MB Bank: 3678.9999.367 (BET367)</small>
+            </div>
+          </div>
+
+          <div class="channel-card" data-method="demo-wallet" onclick="selectDepositChannel(this, 'demo-wallet')">
+            <div class="channel-icon-wrap"><i class="fa-solid fa-mobile-screen-button text-purple"></i></div>
+            <div class="channel-text">
+              <strong>Ví MoMo / ZaloPay</strong>
+              <small>Quét mã thanh toán ví điện tử tức thời</small>
+            </div>
+          </div>
+
+          <!-- Thông tin số dư hiện tại -->
+          <div class="wallet-balance-callout">
+            <span>Số dư hiện có:</span>
+            <strong id="deposit-current-bal">0 ₫</strong>
+          </div>
+        </div>
+
+        <!-- Cột phải: Chọn mệnh giá & Xác nhận nạp -->
+        <div class="deposit-amount-col">
+          <label class="channel-lbl"><i class="fa-solid fa-coins text-gold"></i> 2. CHỌN MỆNH GIÁ NẠP (VND)</label>
+          
+          <div class="quick-chips-grid">
+            <button type="button" class="chip-btn" onclick="selectDemoDepositAmount(100000)">100,000 ₫</button>
+            <button type="button" class="chip-btn" onclick="selectDemoDepositAmount(200000)">200,000 ₫</button>
+            <button type="button" class="chip-btn" onclick="selectDemoDepositAmount(500000)">500,000 ₫</button>
+            <button type="button" class="chip-btn active" onclick="selectDemoDepositAmount(1000000)">1,000,000 ₫</button>
+            <button type="button" class="chip-btn" onclick="selectDemoDepositAmount(2000000)">2,000,000 ₫</button>
+            <button type="button" class="chip-btn" onclick="selectDemoDepositAmount(5000000)">5,000,000 ₫</button>
+          </div>
+
+          <div class="royal-input-group mt-2">
+            <label for="demo-deposit-input">Số tiền nạp tùy chỉnh (VND):</label>
+            <input type="number" id="demo-deposit-input" value="1000000" min="10000" step="50000" class="gold-focus-input" oninput="updateDemoDepositPreview()">
+          </div>
+
+          <div class="deposit-summary-box">
+            <div class="info-row">
+              <span class="lbl">Số tiền nạp:</span>
+              <strong class="val text-gold" id="deposit-preview-amount">+1,000,000 ₫</strong>
+            </div>
+            <div class="info-row">
+              <span class="lbl">Dự kiến số dư sau nạp:</span>
+              <strong class="val text-emerald" id="deposit-preview-after">1,000,000 ₫</strong>
+            </div>
+          </div>
+
+          <div id="deposit-status-box" class="transaction-status-feedback" style="display: none;"></div>
+
+          <button type="button" class="btn btn-gold-block" id="btn-confirm-demo-deposit" onclick="handleConfirmDemoDeposit()">
+            <i class="fa-solid fa-circle-check"></i> XÁC NHẬN NẠP TIỀN
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. MODAL RÚT TIỀN VỀ NGÂN HÀNG -->
+  <div class="royal-modal" id="withdraw-modal" role="dialog" aria-modal="true" aria-labelledby="withdraw-modal-title">
+    <div class="modal-backdrop-royal" onclick="closeModal('withdraw-modal')"></div>
+    <div class="modal-box modal-box-large royal-box-shine">
+      <button class="modal-close-royal" onclick="closeModal('withdraw-modal')" aria-label="Đóng cửa sổ rút tiền"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div class="modal-header-royal">
+        <div class="gold-crest-icon" style="border-color: #ef4444; color: #ef4444;"><i class="fa-solid fa-circle-arrow-up"></i></div>
+        <h2 id="withdraw-modal-title">RÚT TIỀN VỀ NGÂN HÀNG</h2>
+        <p style="color: #94a3b8; font-size: 0.8rem; margin-top: 4px;">Rút tiền siêu tốc 24/7 về tài khoản ngân hàng chính chủ</p>
+      </div>
+
+      <div class="deposit-mega-layout">
+        
+        <!-- Cột trái: Thông tin tài khoản nhận tiền -->
+        <div class="deposit-channels-col">
+          <label class="channel-lbl"><i class="fa-solid fa-building-columns text-gold"></i> TÀI KHOẢN NGÂN HÀNG THỤ HƯỞNG</label>
+          
+          <div class="channel-card active">
+            <div class="channel-icon-wrap"><i class="fa-solid fa-landmark text-emerald"></i></div>
+            <div class="channel-text">
+              <strong>MB BANK (Đã Liên Kết)</strong>
+              <small>STK: 3678.9999.367 • NEWPLAYER3667</small>
+            </div>
+            <span class="recommend-tag">MẶC ĐỊNH</span>
+          </div>
+
+          <div class="wallet-balance-callout withdraw-callout">
+            <span>Số dư khả dụng để rút:</span>
+            <h3 class="text-gold" id="withdraw-available-bal">0 ₫</h3>
+          </div>
+
+          <div class="withdraw-guidelines">
+            <p><i class="fa-solid fa-circle-info text-gold"></i> <strong>Quy định rút tiền:</strong></p>
+            <ul style="font-size: 0.78rem; color: #94a3b8; padding-left: 18px; margin-top: 4px;">
+              <li>Hạn mức rút tối thiểu: <strong>50,000 ₫</strong></li>
+              <li>Số tiền rút không vượt quá số dư khả dụng</li>
+              <li>Hệ thống xử lý thanh toán tự động 24/7</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cột phải: Nhập số tiền rút & Nút xác nhận -->
+        <div class="deposit-amount-col">
+          <label class="channel-lbl"><i class="fa-solid fa-money-bill-wave text-gold"></i> CHỌN SỐ TIỀN RÚT (VND)</label>
+          
+          <div class="quick-chips-grid">
+            <button type="button" class="chip-btn" onclick="selectDemoWithdrawAmount(100000)">100,000 ₫</button>
+            <button type="button" class="chip-btn" onclick="selectDemoWithdrawAmount(200000)">200,000 ₫</button>
+            <button type="button" class="chip-btn active" onclick="selectDemoWithdrawAmount(500000)">500,000 ₫</button>
+            <button type="button" class="chip-btn" onclick="selectDemoWithdrawAmount(1000000)">1,000,000 ₫</button>
+            <button type="button" class="chip-btn" onclick="selectDemoWithdrawAmount(2000000)">2,000,000 ₫</button>
+            <button type="button" class="chip-btn text-gold font-bold" onclick="selectDemoWithdrawAll()">RÚT HẾT</button>
+          </div>
+
+          <div class="royal-input-group mt-2">
+            <label for="demo-withdraw-input">Số tiền muốn rút (VND):</label>
+            <input type="number" id="demo-withdraw-input" value="500000" min="50000" step="50000" class="gold-focus-input" oninput="updateDemoWithdrawPreview()">
+          </div>
+
+          <!-- Thông báo lỗi khi không đủ số dư -->
+          <div id="withdraw-error-box" class="form-error-feedback" style="display: none;">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span id="withdraw-error-text">Số dư không đủ để thực hiện rút tiền!</span>
+          </div>
+
+          <div class="deposit-summary-box">
+            <div class="info-row">
+              <span class="lbl">Số tiền rút:</span>
+              <strong class="val text-danger" id="withdraw-preview-amount">-500,000 ₫</strong>
+            </div>
+            <div class="info-row">
+              <span class="lbl">Số dư còn lại:</span>
+              <strong class="val text-emerald" id="withdraw-preview-after">0 ₫</strong>
+            </div>
+          </div>
+
+          <div id="withdraw-status-box" class="transaction-status-feedback" style="display: none;"></div>
+
+          <button type="button" class="btn btn-gold-block" id="btn-confirm-demo-withdraw" onclick="handleConfirmDemoWithdraw()">
+            <i class="fa-solid fa-money-bill-transfer"></i> XÁC NHẬN RÚT TIỀN
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. MODAL TÀI KHOẢN & VÍ HOÀNG GIA (WALLET & ACCOUNT HUB) -->
+  <div class="royal-modal" id="account-modal" role="dialog" aria-modal="true" aria-labelledby="acc-modal-username">
+    <div class="modal-backdrop-royal" onclick="closeModal('account-modal')"></div>
+    <div class="modal-box modal-box-large royal-box-shine">
+      <button class="modal-close-royal" onclick="closeModal('account-modal')" aria-label="Đóng cửa sổ tài khoản"><i class="fa-solid fa-xmark"></i></button>
+
+      <!-- Header Thẻ VIP Hội Viên -->
+      <div class="account-card-header">
+        <div class="member-avatar">
+          <i class="fa-solid fa-crown text-gold"></i>
+        </div>
+        <div class="member-info-col">
+          <div class="member-name-row">
+            <h2 id="acc-modal-username">newplayer3667</h2>
+            <span class="vip-diamond-badge"><i class="fa-solid fa-gem"></i> BET367 HỘI VIÊN MỚI (CẤP 1)</span>
+          </div>
+          <p class="member-subtext" id="acc-modal-email">newplayer3667@bet367.vn • Hội viên từ 2026</p>
+        </div>
+      </div>
+
+      <!-- 3 Thẻ Thống Kê Ví: Số Dư Khả Dụng • Tổng Đã Nạp • Tổng Đã Rút -->
+      <div class="wallet-stats-row">
+        <div class="wallet-stat-card primary">
+          <span class="stat-lbl"><i class="fa-solid fa-wallet text-gold"></i> SỐ DƯ KHẢ DỤNG</span>
+          <div class="stat-val" id="acc-modal-balance">0 ₫</div>
+        </div>
+        <div class="wallet-stat-card">
+          <span class="stat-lbl"><i class="fa-solid fa-circle-arrow-down text-emerald"></i> TỔNG ĐÃ NẠP</span>
+          <div class="stat-val text-emerald" id="acc-total-deposited">0 ₫</div>
+        </div>
+        <div class="wallet-stat-card">
+          <span class="stat-lbl"><i class="fa-solid fa-circle-arrow-up text-danger"></i> TỔNG ĐÃ RÚT</span>
+          <div class="stat-val text-danger" id="acc-total-withdrawn">0 ₫</div>
+        </div>
+      </div>
+
+      <!-- Thanh Điều Khiển Ví Hội Viên -->
+      <div class="demo-controls-bar">
+        <button type="button" class="btn-demo-action btn-demo-deposit" onclick="switchModal('account-modal', 'deposit-modal')">
+          <i class="fa-solid fa-circle-arrow-down"></i> NẠP TIỀN
+        </button>
+        <button type="button" class="btn-demo-action btn-demo-withdraw" onclick="switchModal('account-modal', 'withdraw-modal')">
+          <i class="fa-solid fa-circle-arrow-up"></i> RÚT TIỀN
+        </button>
+        <button type="button" class="btn-demo-action btn-demo-preset" onclick="switchAccountTab('acc-info', document.getElementById('tab-acc-info'))">
+          <i class="fa-solid fa-id-card"></i> THÔNG TIN VIP
+        </button>
+        <button type="button" class="btn-demo-action btn-demo-reset" onclick="resetDemoSystem()">
+          <i class="fa-solid fa-arrows-rotate"></i> LÀM MỚI VÍ
+        </button>
+      </div>
+
+      <!-- Tab điều hướng trong Tài Khoản -->
+      <div class="royal-account-tabs" role="tablist" aria-label="Quản lý tài khoản hội viên VIP">
+        <button class="acc-tab-btn active" role="tab" id="tab-acc-history" aria-selected="true" aria-controls="acc-history" onclick="switchAccountTab('acc-history', this)">
+          <i class="fa-solid fa-receipt text-gold"></i> Lịch Sử Giao Dịch
+        </button>
+        <button class="acc-tab-btn" role="tab" id="tab-acc-info" aria-selected="false" aria-controls="acc-info" onclick="switchAccountTab('acc-info', this)">
+          <i class="fa-solid fa-id-badge text-gold"></i> Thông Tin & Thẻ VIP
+        </button>
+        <button class="acc-tab-btn" role="tab" id="tab-acc-security" aria-selected="false" aria-controls="acc-security" onclick="switchAccountTab('acc-security', this)">
+          <i class="fa-solid fa-lock text-gold"></i> Bảo Mật & Mật Khẩu
+        </button>
+      </div>
+
+      <!-- Nội dung Tab 1: Lịch sử cược & Giao dịch Demo -->
+      <div class="royal-tab-pane active" id="acc-history">
+        <div class="history-table-wrapper">
+          <table class="royal-table">
+            <thead>
+              <tr>
+                <th>MÃ GD</th>
+                <th>LOẠI HÌNH</th>
+                <th>SẢNH / CHI TIẾT</th>
+                <th>SỐ TIỀN</th>
+                <th>SỐ DƯ SAU GD</th>
+                <th>THỜI GIAN</th>
+                <th>TRẠNG THÁI</th>
+              </tr>
+            </thead>
+            <tbody id="history-tbody">
+              <!-- Render động bằng JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Nội dung Tab 2: Thông tin cá nhân & Ngân hàng -->
+      <div class="royal-tab-pane" id="acc-info">
+        <form class="royal-form" onsubmit="event.preventDefault(); showToast('Đã lưu thông tin tài khoản VIP Bet367!');">
+          <div class="form-grid-2">
+            <div class="royal-input-group">
+              <label>Họ và Tên Hội Viên</label>
+              <input type="text" value="NEWPLAYER3667" disabled>
+            </div>
+            <div class="royal-input-group">
+              <label>Số Điện Thoại Đăng Ký</label>
+              <input type="text" value="0988.367.367" id="acc-phone-input">
+            </div>
+            <div class="royal-input-group">
+              <label>Ngân Hàng Rút Tiền Liên Kết</label>
+              <input type="text" value="MB BANK - STK: 3678.9999.367" disabled>
+            </div>
+            <div class="royal-input-group">
+              <label>Cấp Bậc Khuyến Mãi</label>
+              <input type="text" value="Hoàn trả Thể Thao 1.5% • Đề 1 ăn 99.5" disabled class="text-gold font-bold">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-royal-gold mt-2">
+            <i class="fa-solid fa-floppy-disk"></i> Lưu Cập Nhật Thông Tin
+          </button>
+        </form>
+      </div>
+
+      <!-- Nội dung Tab 3: Đổi mật khẩu -->
+      <div class="royal-tab-pane" id="acc-security">
+        <form class="royal-form" onsubmit="event.preventDefault(); showToast('Đổi mật khẩu bảo vệ thành công!');">
+          <div class="royal-input-group">
+            <label>Mật Khẩu Hiện Tại</label>
+            <input type="password" placeholder="Nhập mật khẩu hiện tại" required>
+          </div>
+          <div class="form-grid-2">
+            <div class="royal-input-group">
+              <label>Mật Khẩu Mới</label>
+              <input type="password" placeholder="Tối thiểu 6 ký tự" required minlength="6">
+            </div>
+            <div class="royal-input-group">
+              <label>Xác Nhận Mật Khẩu Mới</label>
+              <input type="password" placeholder="Nhập lại mật khẩu mới" required minlength="6">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-royal-gold mt-2">
+            <i class="fa-solid fa-shield-halved"></i> Cập Nhật Mật Khẩu
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==================== HIỆU ỨNG CHIẾN THẮNG BIG WIN HOÀNG GIA ==================== -->
+  <div class="big-win-overlay" id="big-win-overlay" onclick="closeBigWinCelebration()">
+    <!-- Lớp hào quang vàng xoay 360 độ đa tầng -->
+    <div class="sunburst-rays sunburst-primary"></div>
+    <div class="sunburst-rays sunburst-secondary"></div>
+    <div class="glow-radial-aura"></div>
+
+    <!-- Hạt pháo hoa, kim cương & đồng xu vàng rơi rực rỡ -->
+    <div class="celebration-particles" id="celebration-particles"></div>
+
+    <!-- Thẻ Big Win Hoàng Kim Macau / Las Vegas Cao Cấp -->
+    <div class="big-win-card" onclick="event.stopPropagation()">
+      <!-- Góc hoa văn hoàng gia mạ vàng -->
+      <div class="card-ornament top-left"><i class="fa-solid fa-gem"></i></div>
+      <div class="card-ornament top-right"><i class="fa-solid fa-gem"></i></div>
+      <div class="card-ornament btm-left"><i class="fa-solid fa-gem"></i></div>
+      <div class="card-ornament btm-right"><i class="fa-solid fa-gem"></i></div>
+
+      <!-- Cụm Vương miện 3D & hiệu ứng ánh sao lấp lánh -->
+      <div class="win-crest-wrapper">
+        <div class="win-crest-aura"></div>
+        <div class="win-crown-icon">
+          <i class="fa-solid fa-crown"></i>
+        </div>
+        <div class="sparkle-stars">
+          <span class="star-sparkle s1">✨</span>
+          <span class="star-sparkle s2">⭐</span>
+          <span class="star-sparkle s3">✨</span>
+        </div>
+      </div>
+
+      <!-- Tiêu đề chiến thắng font tiếng Việt chuẩn đẹp sang trọng -->
+      <h2 class="win-title" id="win-title-display">CHIẾN THẮNG RỰC RỠ!</h2>
+      <div class="win-highlight-divider">
+        <span class="divider-line"></span>
+        <i class="fa-solid fa-star text-gold"></i>
+        <span class="divider-line"></span>
+      </div>
+
+      <!-- Khung số tiền nhảy số đếm tiền hoàng gia -->
+      <div class="win-amount-box">
+        <span class="plus-sign">+</span>
+        <span class="win-amount-number" id="win-amount-display">198,000</span>
+        <span class="win-currency">₫</span>
+      </div>
+
+      <p class="win-subtitle" id="win-subtitle-display">Tiền thưởng đã được cộng tức thì vào số dư khả dụng của quý khách!</p>
+
+      <!-- Nút nhận tiền mạ vàng hiệu ứng quét sáng -->
+      <button class="btn btn-collect-win" onclick="closeBigWinCelebration()">
+        <span class="collect-glow"></span>
+        <i class="fa-solid fa-coins"></i>
+        <span>THU TIỀN VỀ VÍ NGAY</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== PREMIUM CASINO FOOTER ==================== -->
+  <footer class="royal-footer" role="contentinfo">
+    <div class="container footer-content">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <span class="crest-number">367</span>
+            <span class="footer-brand-name">BET<span class="text-gold">367</span> ROYALE</span>
+          </div>
+          <p class="footer-desc">
+            Tổ hợp sòng bạc & trò chơi giải trí thượng lưu chuẩn quốc tế. Trải nghiệm Tài Xỉu MD5 minh bạch, Lô Đề 1 ăn 99.5, Live Casino trực tiếp và kèo Thể Thao đỉnh cao.
+          </p>
+          <div class="footer-badges">
+            <span class="cert-pill"><i class="fa-solid fa-shield-halved text-gold"></i> SSL 256-BIT</span>
+            <span class="cert-pill"><i class="fa-solid fa-lock text-gold"></i> MD5 VERIFIED</span>
+            <span class="cert-pill"><i class="fa-solid fa-dice text-gold"></i> FAIR RNG</span>
+          </div>
+        </div>
+
+        <div class="footer-nav-col">
+          <h3 class="footer-heading">SẢNH GAME CHÍNH</h3>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="navigateToPage('taixiu')"><i class="fa-solid fa-angle-right text-gold"></i> Tài Xỉu MD5 Xanh Chín</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('lode')"><i class="fa-solid fa-angle-right text-gold"></i> Lô Đề 1 Ăn 99.5</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('casino')"><i class="fa-solid fa-angle-right text-gold"></i> Live Casino Baccarat</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('sports')"><i class="fa-solid fa-angle-right text-gold"></i> Kèo Bóng Đá Trực Tuyến</a></li>
+            <li><a href="javascript:void(0)" onclick="navigateToPage('slots')"><i class="fa-solid fa-angle-right text-gold"></i> Nổ Hũ Thần Tài 777</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <h3 class="footer-heading">TIỆN ÍCH HỘI VIÊN</h3>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openModal('deposit-modal')"><i class="fa-solid fa-angle-right text-gold"></i> Nạp Tiền VietQR Tự Động</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('account-modal')"><i class="fa-solid fa-angle-right text-gold"></i> Quản Lý Tài Khoản VIP</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('history-modal')"><i class="fa-solid fa-angle-right text-gold"></i> Lịch Sử Đặt Cược</a></li>
+            <li><a href="javascript:void(0)" onclick="openModal('register-modal')"><i class="fa-solid fa-angle-right text-gold"></i> Đăng Ký Tài Khoản Mới</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-support-col">
+          <h3 class="footer-heading">HỖ TRỢ VIP 24/7</h3>
+          <div class="support-card-compact">
+            <div class="support-item">
+              <i class="fa-solid fa-headset text-gold"></i>
+              <div>
+                <span class="sup-lbl">Hotline CSKH:</span>
+                <strong class="sup-val">0988.367.367</strong>
+              </div>
+            </div>
+            <div class="support-item">
+              <i class="fa-brands fa-telegram text-gold"></i>
+              <div>
+                <span class="sup-lbl">Telegram VIP:</span>
+                <strong class="sup-val">@Bet367RoyaleVIP</strong>
+              </div>
+            </div>
+          </div>
+          <div class="responsible-notice">
+            <span class="age-badge">18+</span>
+            <small>Chơi có trách nhiệm. Bản quyền thuộc về BET367 Royale Casino.</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p class="copyright-text">© 2026 BET367 ROYALE CASINO & SPORTS. TOÀN BỘ BẢN QUYỀN ĐƯỢC BẢO LƯU.</p>
+        <div class="footer-security-marks">
+          <span><i class="fa-solid fa-shield-halved text-gold"></i> BẢO MẬT SSL 256-BIT AN TOÀN TUYỆT ĐỐI</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Thanh Điều Hướng Dưới Cùng Dành Riêng Cho Mobile (1 Tay Thao Tác Đẳng Cấp) -->
+  <nav class="royal-mobile-bottom-bar" id="mobile-bottom-bar" aria-label="Thanh điều hướng di động">
+    <button class="mobile-nav-btn active" id="mob-nav-home" onclick="navigateToPage('home')" aria-label="Sảnh Chính">
+      <i class="fa-solid fa-house"></i>
+      <span>Sảnh Chính</span>
+    </button>
+    <button class="mobile-nav-btn" id="mob-nav-taixiu" onclick="navigateToPage('taixiu')" aria-label="Tài Xỉu">
+      <div class="mob-icon-wrap">
+        <i class="fa-solid fa-dice-d6"></i>
+        <span class="mob-hot-pill">HOT</span>
+      </div>
+      <span>Tài Xỉu</span>
+    </button>
+    <button class="mobile-nav-btn mob-deposit-center" onclick="openModal('deposit-modal')" aria-label="Nạp Tiền Nhanh">
+      <div class="mob-center-circle">
+        <i class="fa-solid fa-plus"></i>
+      </div>
+      <span>NẠP TIỀN</span>
+    </button>
+    <button class="mobile-nav-btn" id="mob-nav-casino" onclick="navigateToPage('casino')" aria-label="Live Casino">
+      <i class="fa-solid fa-dice"></i>
+      <span>Casino</span>
+    </button>
+    <button class="mobile-nav-btn" onclick="openDrawer()" aria-label="Menu Tổng">
+      <i class="fa-solid fa-bars"></i>
+      <span>Menu</span>
+    </button>
+  </nav>
+
+  <!-- Toast Notification Hoàng Gia -->
+  <div id="toast-container" class="royal-toast-container"></div>
+
+  <!-- Script Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
