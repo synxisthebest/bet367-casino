@@ -3119,7 +3119,21 @@ button {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 992px) {
+  .royal-nav {
+    display: flex;
+    gap: 3px;
+    padding: 3px 5px;
+  }
+  .nav-item {
+    padding: 5px 8px;
+    font-size: 0.76rem;
+    gap: 4px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 991px) {
   .royal-nav {
     display: none;
   }
@@ -6968,3 +6982,297 @@ button {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================================
+   CHUYÊN BIỆT CHO DESKTOP / PC (MIN-WIDTH: 1025PX & 1400PX)
+   ĐẢM BẢO 100% KHÔNG TÁC ĐỘNG VÀO GIAO DIỆN MOBILE
+   ======================================================== */
+
+@media (min-width: 1025px) {
+  /* 1. Header & Navigation Máy Tính */
+  .royal-header {
+    height: 80px;
+  }
+
+  .header-content {
+    height: 80px;
+    gap: 20px;
+  }
+
+  .royal-nav {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(14, 17, 26, 0.85);
+    padding: 5px 8px;
+    border-radius: 14px;
+    border: 1.5px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-item {
+    padding: 7px 14px;
+    border-radius: 10px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    transition: all 0.25s ease;
+    height: 38px;
+  }
+
+  .nav-item:hover {
+    background: rgba(212, 175, 55, 0.14);
+    border-color: rgba(212, 175, 55, 0.45);
+    color: #ffffff;
+    transform: translateY(-1px);
+  }
+
+  .nav-item.active {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(185, 28, 28, 0.15) 100%);
+    border-color: #ffd700;
+    color: #ffffff;
+    box-shadow: 0 0 16px rgba(255, 215, 0, 0.35);
+  }
+
+  .btn-royal-deposit {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn-royal-deposit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7);
+  }
+
+  .btn-royal-account {
+    transition: all 0.25s ease;
+  }
+
+  .btn-royal-account:hover {
+    border-color: #ffd700;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.3);
+    transform: translateY(-1px);
+  }
+
+  /* 2. Hero Section Máy Tính */
+  .mega-hero-banner {
+    padding: 70px 0 90px;
+  }
+
+  .hero-inner-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .vip-metal-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  }
+
+  .vip-metal-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.95), 0 0 45px rgba(255, 215, 0, 0.45);
+  }
+
+  .quad-item {
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .quad-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 215, 0, 0.45);
+    background: rgba(25, 30, 44, 0.95);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  }
+
+  /* 3. Lưới Thẻ Cổng Game Máy Tính: 3 Cột Chuẩn Sang Trọng */
+  .hub-portal-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 50px;
+  }
+
+  .hub-card {
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hub-card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .hub-card-actions {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  /* 4. Đấu Trường Tài Xỉu Máy Tính */
+  .taixiu-game-table {
+    padding: 36px 32px;
+  }
+
+  .taixiu-arena {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr 1fr;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .bet-gate-box {
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .bet-gate-box:hover {
+    border-color: rgba(255, 215, 0, 0.65);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .chip-selector-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 14px 20px;
+  }
+
+  .chip-coins-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .coin-btn {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .coin-btn:hover {
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7), 0 0 12px rgba(255, 215, 0, 0.5);
+  }
+
+  /* 5. Sảnh Lô Đề Máy Tính */
+  .lode-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.75fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .quick-numbers-grid {
+    grid-template-columns: repeat(10, 1fr);
+    max-height: 260px;
+    gap: 7px;
+  }
+
+  .num-cell:hover {
+    transform: scale(1.08);
+    z-index: 2;
+  }
+
+  /* 6. Bảng Kèo Thể Thao Máy Tính */
+  .matches-list-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .match-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 24px;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .match-card:hover {
+    border-color: rgba(255, 215, 0, 0.5);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75), 0 0 20px rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .match-odds-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .odd-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.35);
+  }
+
+  /* 7. Máy Quay Hũ Slots 777 */
+  .slot-machine-box {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 32px;
+  }
+
+  .slot-reels-frame {
+    max-width: 720px;
+    margin: 20px auto;
+  }
+
+  /* 8. Modals Máy Tính: Căn Giữa Sắc Nét */
+  .modal-overlay {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .modal-box {
+    max-width: 580px;
+    border-radius: 24px;
+    padding: 32px 30px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95), 0 0 50px rgba(212, 175, 55, 0.25);
+  }
+
+  .modal-box-large {
+    max-width: 760px;
+  }
+
+  .modal-close-royal:hover {
+    transform: rotate(90deg) scale(1.05);
+    border-color: #ffd700;
+    color: #ffd700;
+    background: rgba(255, 215, 0, 0.15);
+  }
+}
+
+/* Màn Hình Siêu Rộng Desktop: 1400px - 1920px+ (Full HD / 2K / 4K) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1380px;
+    padding: 0 32px;
+  }
+
+  .hero-inner-grid {
+    gap: 60px;
+  }
+
+  .hub-portal-grid {
+    gap: 32px;
+  }
+
+  .taixiu-game-table {
+    padding: 40px;
+  }
+
+  .baccarat-cards-stage {
+    max-width: 920px;
+  }
+
+  .baccarat-betting-grid {
+    max-width: 1020px;
+  }
+}
+
