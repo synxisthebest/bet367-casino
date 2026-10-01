@@ -45,9 +45,9 @@
   --sapphire-blue: #3b82f6;
 
   /* Fonts - Luxury Roman & Geometric Sans */
-  --font-serif: 'Playfair Display', 'Cinzel', Georgia, 'Times New Roman', serif;
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-royal: 'Cinzel', 'Playfair Display', serif;
+  --font-royal: 'Montserrat', 'Playfair Display', sans-serif;
   --font-win: 'Montserrat', sans-serif;
   --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -6990,33 +6990,58 @@ button {
 
 @media (min-width: 1025px) {
   /* 1. Header & Navigation Máy Tính */
+  .royal-header .container {
+    max-width: 1440px;
+    padding: 0 24px;
+  }
+
   .royal-header {
     height: 80px;
   }
 
+  .royal-hamburger {
+    display: none;
+  }
+
+  .header-left {
+    gap: 0;
+    flex-shrink: 0;
+  }
+
   .header-content {
     height: 80px;
-    gap: 20px;
+    gap: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .royal-brand {
+    margin-right: 12px;
+    flex-shrink: 0;
   }
 
   .royal-nav {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
     background: rgba(14, 17, 26, 0.85);
-    padding: 5px 8px;
+    padding: 4px 6px;
     border-radius: 14px;
     border: 1.5px solid rgba(212, 175, 55, 0.25);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    flex-shrink: 1;
   }
 
   .nav-item {
-    padding: 7px 14px;
+    padding: 6px 11px;
     border-radius: 10px;
-    font-size: 0.84rem;
+    font-size: 0.81rem;
     font-weight: 700;
     transition: all 0.25s ease;
-    height: 38px;
+    height: 36px;
+    white-space: nowrap;
   }
 
   .nav-item:hover {
@@ -7033,7 +7058,19 @@ button {
     box-shadow: 0 0 16px rgba(255, 215, 0, 0.35);
   }
 
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
   .btn-royal-deposit {
+    padding: 8px 14px;
+    gap: 8px;
+    min-height: 42px;
+    flex-shrink: 0;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
@@ -7043,6 +7080,12 @@ button {
   }
 
   .btn-royal-account {
+    padding: 6px 14px 6px 8px;
+    min-height: 42px;
+    border-radius: 14px;
+    gap: 10px;
+    flex-shrink: 0;
+    white-space: nowrap;
     transition: all 0.25s ease;
   }
 
@@ -7053,15 +7096,31 @@ button {
     transform: translateY(-1px);
   }
 
+  .acc-name {
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   /* 2. Hero Section Máy Tính */
   .mega-hero-banner {
-    padding: 70px 0 90px;
+    padding: 65px 0 85px;
+  }
+
+  .hero-headline {
+    font-family: var(--font-royal);
+    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
   }
 
   .hero-inner-grid {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
-    gap: 50px;
+    gap: 48px;
     align-items: center;
   }
 
@@ -7086,17 +7145,34 @@ button {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
   }
 
-  /* 3. Lưới Thẻ Cổng Game Máy Tính: 3 Cột Chuẩn Sang Trọng */
+  /* 3. Lưới Thẻ Cổng Game Máy Tính: 6 Cột Đối Xứng Hoàn Hảo Cho 5 Thẻ */
   .hub-portal-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
     margin-bottom: 50px;
   }
 
   .hub-card {
-    min-height: 430px;
+    min-height: 440px;
     display: flex;
     flex-direction: column;
+  }
+
+  /* Hàng trên: 3 thẻ (mỗi thẻ chiếm 2 cột) */
+  .hub-card:nth-child(1),
+  .hub-card:nth-child(2),
+  .hub-card:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  /* Hàng dưới: 2 thẻ được căn chính giữa trang (cột 2->4 và cột 4->6) */
+  .hub-card:nth-child(4) {
+    grid-column: 2 / span 2;
+  }
+
+  .hub-card:nth-child(5) {
+    grid-column: 4 / span 2;
   }
 
   .hub-card-body {
